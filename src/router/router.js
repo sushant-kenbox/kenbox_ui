@@ -1,5 +1,5 @@
 import React from "react"
-import { Route, Switch, Redirect } from "react-router-dom"
+import { Route, Switch} from "react-router-dom"
 
 //import RouteList from "./routeList"
 import AdminRouteList from "./adminRouteList"
@@ -9,10 +9,8 @@ import MainAdminLayout from "../containers/layouts/MainAdmin"
 
 // views
 
-
-
-import Login from "../containers/views/Main/Login/Login"
-import Registration from "../containers/views/Main/Login/Registration"
+import Login from "../containers/views/Users/Login"
+import Registration from "../containers/views/Users/Registration"
 import NoMatch from "../components/Common/NoMatch"
 // admin Views
 

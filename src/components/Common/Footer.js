@@ -1,6 +1,5 @@
 import React from "react"
-
-export default () => ( <footer className="site-footer">
+const  Footer = () => ( <footer className="site-footer">
 <div className="text-center">
   <p>
     © Copyrights <strong>Kanbox</strong>. All Rights Reserved
@@ -10,8 +9,10 @@ export default () => ( <footer className="site-footer">
     Created by Varun
   </div>
   <a href="index.html#" className="go-top">
-    <i className="fa fa-angle-up" />
+    <i className="fa fa-angle-up" />  
   </a>
 </div>
 </footer>
 )
+
+export default Footer

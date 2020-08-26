@@ -1,8 +1,8 @@
 import React from "react"
 import { Route, Switch } from "react-router-dom"
-import Main from "../components/Common/Main"
-import UserHome from "../components/Common/UserHome"
-import UserAdd from "../components/Common/UserAdd"
+import Main from "../components/Home/"
+import UserHome from "./../containers/views/Users/UserHome"
+import UserAdd from "./../containers/views/Users/UserAdd"
 import NoMatch from "../components/Common/NoMatch"
 
 

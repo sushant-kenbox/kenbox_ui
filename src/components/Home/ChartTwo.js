@@ -1,6 +1,4 @@
 import React from "react"
-import { Link } from "react-router-dom"
-
 
 const ChartTwo = () => {
   console.log("%c RENDER Nav', 'color: orange; font-size: 20px")
@@ -28,11 +26,12 @@ const ChartTwo = () => {
               src="img/ui-danro.jpg"
               className="img-circle"
               width={65}
+              alt="alt"
             />
           </div>
           <div className="col-md-9">
             <p>
-              <name>Dan Rogers</name>
+              Dan Rogers
               sent you a message.
             </p>
             <p className="small">3 hours ago</p>

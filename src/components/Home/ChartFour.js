@@ -1,6 +1,4 @@
 import React from "react"
-import { Link } from "react-router-dom"
-
 
 const ChartFour = () => {
 	console.log("%c RENDER Nav', 'color: orange; font-size: 20px")
@@ -29,6 +27,7 @@ const ChartFour = () => {
               src="img/friends/fr-06.jpg"
               className="img-circle"
               width={80}
+              alt="alt"
             />
             <h4>DJ SHERMAN</h4>
           </div>

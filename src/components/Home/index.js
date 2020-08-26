@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"
-import RightSideBar from "./RightSideBar"
+import RightSideBar from "./../Common/RightSideBar"
 import Chart from "./Chart"
 
 class Main extends React.Component {

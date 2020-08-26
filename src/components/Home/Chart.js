@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "react-router-dom"
 import ChartOne from "./ChartOne"
 import ChartTwo from "./ChartTwo"
 import ChartThree from "./ChartThree"

@@ -1,6 +1,4 @@
 import React from "react"
-import { Link } from "react-router-dom"
-
 
 const ChartOne = () => {
   console.log("%c RENDER Nav', 'color: orange; font-size: 20px")
