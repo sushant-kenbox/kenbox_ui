@@ -1,15 +1,25 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "react-router-dom"
 
 
 const Header = () => {
-  console.log("%c RENDER Nav', 'color: orange; font-size: 20px")
+
+  const [condition, setCondition] = useState(false);
+
+  const handleToggle = (e) => {
+
+    setCondition(!condition)
+  }
+
+
+  { condition ? document.body.classList.add('sidebar-closed') : document.body.classList.remove('sidebar-closed') }
 
   return (
 
     <header className="header black-bg">
       <div className="sidebar-toggle-box">
-        <div className="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"
+        <div className="fa fa-bars tooltips" data-placement="right" onClick={(e) => handleToggle(e)}
+          data-original-title="Toggle Navigation"
         />
       </div>
       {}
