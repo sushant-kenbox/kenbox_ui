@@ -1,11 +1,35 @@
-import React from "react";
-const UserAdd = () => {
+import React, { useState } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
+
+const UserAdd = () => {
 
     const handleAddUser = (e) => {
         e.preventDefault();
         console.log('handleAddUser')
     }
+
+    const DatePickerWithCalander = () => {
+        const [startDate, setStartDate] = useState(new Date());
+        return (
+            <DatePicker selected={startDate} onChange={date => setStartDate(date)} className="form-control" />
+        );
+    };
+    
+    const DatePickerWithDisabledCalander = () => {
+        const [startDate, setStartDate] = useState(new Date());
+        return (
+            <DatePicker className="form-control"
+                selected={startDate}
+                onChange={date => setStartDate(date)}
+                showYearDropdown
+                dateFormatCalendar="MMMM"
+                yearDropdownItemNumber={15}
+                scrollableYearDropdown
+            />
+        );
+    };
 
     return (
 
@@ -30,6 +54,23 @@ const UserAdd = () => {
                     </span>
                 </div>
             </div>
+            <div className="form-group">
+                <label className="col-sm-2 col-sm-2 control-label">
+                    Help text
+                </label>
+                <div className="col-sm-10">
+                    <DatePickerWithCalander />
+                </div>
+            </div>
+            <div className="form-group">
+                <label className="col-sm-2 col-sm-2 control-label">
+                    Help text
+                </label>
+                <div className="col-sm-10">
+                    <DatePickerWithDisabledCalander />
+                </div>
+            </div>
+  
             <div className="form-group">
                 <label className="col-sm-2 col-sm-2 control-label">
                     Rounder

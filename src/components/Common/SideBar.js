@@ -5,7 +5,7 @@ import { ProSidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import './../../assets/css/navigation.css';
 
 const SideBar = () => {
-  console.log("%c RENDER Nav', 'color: orange; font-size: 20px")
+  //console.log("%c RENDER Nav', 'color: orange; font-size: 20px")
 
   return (
 
