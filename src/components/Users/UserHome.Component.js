@@ -1,11 +1,16 @@
-import React, { Fragment } from "react";
+import React, { Fragment,useState } from "react";
 import BootstrapTable from 'react-bootstrap-table-next';
 import filterFactory, { textFilter } from 'react-bootstrap-table2-filter';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 
+import ModelBox from "./../Common/Model"
+
+
 
 const UserHome = () => {
+
+  const [show, setShow] = useState(false);
 
   const products = [
     {
@@ -191,62 +196,62 @@ const UserHome = () => {
 
   ],
 
-   columns = [
+    columns = [
 
-    {
-      dataField: 'firstname',
-      text: 'First Name',
-      filter: textFilter()
-    },
+      {
+        dataField: 'firstname',
+        text: 'First Name',
+        filter: textFilter()
+      },
 
-    {
-      dataField: 'lastname',
-      text: 'Last Name',
-      sort: true,
-      filter: textFilter()
+      {
+        dataField: 'lastname',
+        text: 'Last Name',
+        sort: true,
+        filter: textFilter()
 
-    },
-    {
-      dataField: 'phonenumber',
-      text: 'Phone',
-      sort: true,
-      filter: textFilter()
-    },
-    {
-      dataField: 'city',
-      text: 'City',
-      sort: true,
-      filter: textFilter()
-    },
-    {
-      dataField: 'state',
-      text: 'State',
-      sort: true,
-      filter: textFilter()
-    },
-    {
-      dataField: 'action',
-      text: 'Action',
-      sort: false,
-      formatter: (cell, row, rowIndex, extraData) => (
-        <Fragment>
-          <button type="button" className="mr-1  btn btn-primary btn-sm" onClick={(e) => handleView(cell, row, rowIndex, extraData)}><i className="fa fa-eye"></i></button>
-          <button type="button" className="mr-1 btn btn-success btn-sm" onClick={(e) =>  handleEdit(cell, row, rowIndex, extraData)}><i className="fa fa-edit"></i></button>
-          <button type="button" className="mr-1 btn btn-danger btn-sm" onClick={(e) =>   handleDelete(cell, row, rowIndex, extraData)}><i className="fa fa-trash"></i></button>
-        </Fragment>
-      ),
-      // events: {
-      //   onClick: (e, column, columnIndex, row, rowIndex) => {
-      //     //console.log(e);
-      //     console.log(column);
-      //     console.log(columnIndex);
-      //     console.log(row);
-      //     console.log(rowIndex);
-      //     console.log('Click on Product ID field', row.id);
-      //   }
-      // }
+      },
+      {
+        dataField: 'phonenumber',
+        text: 'Phone',
+        sort: true,
+        filter: textFilter()
+      },
+      {
+        dataField: 'city',
+        text: 'City',
+        sort: true,
+        filter: textFilter()
+      },
+      {
+        dataField: 'state',
+        text: 'State',
+        sort: true,
+        filter: textFilter()
+      },
+      {
+        dataField: 'action',
+        text: 'Action',
+        sort: false,
+        formatter: (cell, row, rowIndex, extraData) => (
+          <Fragment>
+            <button type="button" className="mr-1  btn btn-primary btn-sm" onClick={(e) => handleView(cell, row, rowIndex, extraData)}><i className="fa fa-eye"></i></button>
+            <button type="button" className="mr-1 btn btn-success btn-sm" onClick={(e) => handleEdit(cell, row, rowIndex, extraData)}><i className="fa fa-edit"></i></button>
+            <button type="button" className="mr-1 btn btn-danger btn-sm" onClick={(e) => handleDelete(cell, row, rowIndex, extraData)}><i className="fa fa-trash"></i></button>
+          </Fragment>
+        ),
+        // events: {
+        //   onClick: (e, column, columnIndex, row, rowIndex) => {
+        //     //console.log(e);
+        //     console.log(column);
+        //     console.log(columnIndex);
+        //     console.log(row);
+        //     console.log(rowIndex);
+        //     console.log('Click on Product ID field', row.id);
+        //   }
+        // }
 
-    }]
+      }]
 
 
   const handleView = (cell, row, rowIndex, extraData) => {
@@ -256,8 +261,13 @@ const UserHome = () => {
     console.log('handleEdit', row, rowIndex)
   }
   const handleDelete = (cell, row, rowIndex, extraData) => {
+    setShow(true);
     console.log('handleDelete', row, rowIndex)
   }
+
+  const handleCloseModel = () => setShow(false);
+ // const handleShowModel = () => setShow(true);
+
 
   const options = {
     page: 1,
@@ -294,24 +304,28 @@ const UserHome = () => {
 
   };
 
-
+console.log("-----",show)
   return (
-          <BootstrapTable
+    <Fragment>
+      <ModelBox show={show}  handleShowModel={handleDelete} handleCloseModel={handleCloseModel}/>
 
-            striped
+      <BootstrapTable
 
-            hover
+        striped
 
-            keyField='firstname'
+        hover
 
-            data={products}
+        keyField='firstname'
 
-            columns={columns}
+        data={products}
 
-            filter={filterFactory()}
+        columns={columns}
 
-            pagination={paginationFactory(options)}
-          />
+        filter={filterFactory()}
+
+        pagination={paginationFactory(options)}
+      />
+    </Fragment>
 
   )
 }
