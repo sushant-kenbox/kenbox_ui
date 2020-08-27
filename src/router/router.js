@@ -1,8 +1,8 @@
 import React from "react"
 import { Route, Switch} from "react-router-dom"
 
-//import RouteList from "./routeList"
-import AdminRouteList from "./adminRouteList"
+import AdminRouteList from "./AdminRouteList"
+import PublicRoute from './PublicRoute';
 
 //import MainDefault from "../containers/layouts/Default"
 import MainAdminLayout from "../containers/layouts/MainAdmin"
@@ -12,9 +12,8 @@ import MainAdminLayout from "../containers/layouts/MainAdmin"
 import Login from "../containers/views/Users/Login"
 import Registration from "../containers/views/Users/Registration"
 import NoMatch from "../components/Common/NoMatch"
-// admin Views
-//import PrivateRoute from './PrivateRoute';
-import PublicRoute from './PublicRoute';
+
+
 
 export default () => {
 

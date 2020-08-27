@@ -1,15 +1,15 @@
-const TOKEN_KEY = 'jwt';
+const ACCESS_TOKEN_KEY = 'kenbox';
 
 export const login = () => {
-    localStorage.setItem(TOKEN_KEY, 'TestLogin');
+    localStorage.setItem(ACCESS_TOKEN_KEY, 'kenbox');
 }
 
 export const logout = () => {
-    localStorage.removeItem(TOKEN_KEY);
+    localStorage.removeItem(ACCESS_TOKEN_KEY);
 }
 
 export const isLogin = () => {
-    if (localStorage.getItem(TOKEN_KEY)) {
+    if (localStorage.getItem(ACCESS_TOKEN_KEY)) {
         return true;
     }
 
