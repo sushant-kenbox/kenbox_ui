@@ -13,20 +13,19 @@ import Login from "../containers/views/Users/Login"
 import Registration from "../containers/views/Users/Registration"
 import NoMatch from "../components/Common/NoMatch"
 // admin Views
-
+//import PrivateRoute from './PrivateRoute';
+import PublicRoute from './PublicRoute';
 
 export default () => {
 
 	return (
 		<Switch>
-			<Route exact path={["/", "/login", "/defaultPath"]} component={Login} />
-			<Route path='/registration' component={Registration} />
-			{/* <Route path='/admin/:path?' exact></Route> */}
+			<PublicRoute restricted={true} exact path={["/", "/login", "/defaultPath"]} component={Login} />
+			<PublicRoute restricted={true} path='/registration' component={Registration} />
 			<Route path='/admin/:path?' exact>
 				<MainAdminLayout>
 					<Switch>
 						<AdminRouteList />
-						
 					</Switch>
 
 				</MainAdminLayout>

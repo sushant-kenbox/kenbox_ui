@@ -4,7 +4,7 @@ import Main from "../components/Home/"
 import UserHome from "./../containers/views/Users/UserHome"
 import UserAdd from "./../containers/views/Users/UserAdd"
 import NoMatch from "../components/Common/NoMatch"
-
+import PrivateRoute from "./PrivateRoute";
 
 const routes = [
 	{
@@ -27,7 +27,7 @@ const routes = [
 		exact: true,
 		Component: UserAdd,
 	}
-	
+
 ]
 
 
@@ -35,11 +35,11 @@ const index = () => (
 	<Switch>
 
 		{routes.map(({ path, exact, Component }) => (
-			<Route path={path} key={path} exact={exact} render={(props) => (
+			<PrivateRoute path={path} component={Component} key={path} exact={exact} render={(props) => (
 				<Component {...props} />
 			)} />
 		))}
-		 <Route render={(props) => <NoMatch {...props} />} />
+		<Route render={(props) => <NoMatch {...props} />} />
 	</Switch>
 )
 
