@@ -34,151 +34,139 @@ const UserAdd = () => {
         );
     };
 
-    return (
+    return (<Fragment>
+        <ModelBoxSuccess show={show} handleCloseModel={handleCloseModel} />
 
-        <Fragment>
-            <ModelBoxSuccess show={show}  handleCloseModel={handleCloseModel} />
-
-            <form className="form-horizontal style-form" method="get" onSubmit={(e) => handleAddUser(e)}>
-                <div className="form-group">
-                    <label className="col-sm-2 col-sm-2 control-label">
-                        First Name
-                </label>
-                    <div className="col-sm-10">
-                        <input type="text" className="form-control" placeholder="First Name" />
-                    </div>
-                </div>
-                <div className="form-group">
-                    <label className="col-sm-2 col-sm-2 control-label">
-                        Last Name
-                </label>
-                    <div className="col-sm-10">
-                        <input type="text" className="form-control" placeholder="Last Name" />
-
-                    </div>
-                </div>
-                <div className="form-group">
-                    <label className="col-sm-2 col-sm-2 control-label">
-                        Phone No
-                </label>
-                    <div className="col-sm-10">
-                        <input type="text" className="form-control" maxLength={10} placeholder="Phone No" />
-
-                    </div>
-                </div>
-                <div className="form-group">
-                    <label className="col-sm-2 col-sm-2 control-label">
-                        State
-                </label>
-                    <div className="col-sm-10">
-                        <select className="form-control">
-                            <option>Punjab</option>
-                            <option>Delhi</option>
-                            <option>Haryana</option>
-                            <option>Bihar</option>
-                            <option>Uttar Pradesh</option>
-                        </select>
-                    </div>
-                </div>
-                <div className="form-group">
-                    <label className="col-sm-2 col-sm-2 control-label">
-                        City
-                </label>
-                    <div className="col-sm-10">
-                        <select className="form-control">
-                            <option>Bijnor</option>
-                            <option>Dhampur</option>
-                            <option>Jaipur</option>
-                            <option>Delhi</option>
-                            <option>Patna</option>
-                            <option>Pathankot</option>
-                            <option>GuruGram</option>
-                        </select>
-                    </div>
-                </div>
-                <div className="form-group">
-                    <label className="col-sm-2 col-sm-2 control-label">
-                        Dob
-                </label>
-                    <div className="col-sm-10">
-                        <DatePickerWithCalander />
-                    </div>
-                </div>
-                {/* <div className="form-group">
-                <label className="col-sm-2 col-sm-2 control-label">
-                    Help text
-                </label>
-                <div className="col-sm-10">
-                    <DatePickerWithDisabledCalander />
-                </div>
-            </div>
-  
+        <form className="form-horizontal style-form" method="get" onSubmit={(e) => handleAddUser(e)}>
             <div className="form-group">
                 <label className="col-sm-2 col-sm-2 control-label">
-                    Rounder
-                </label>
+                    First Name
+                                </label>
                 <div className="col-sm-10">
-                    <input type="text" className="form-control round-form" />
+                    <input type="text" className="form-control" placeholder="First Name" />
                 </div>
             </div>
             <div className="form-group">
                 <label className="col-sm-2 col-sm-2 control-label">
-                    Input focus
-                </label>
+                    Last Name
+                                </label>
                 <div className="col-sm-10">
-                    <input
-                        className="form-control"
-                        id="focusedInput"
-                        type="text"
-                        defaultValue="This is focused..."
-                        placeholder="placeholder"
-                    />
-                </div>
-            </div>
+                    <input type="text" className="form-control" placeholder="Last Name" />
 
-            <div className="form-group">
-                <label className="col-sm-2 col-sm-2 control-label">
-                    Placeholder
-                </label>
-                <div className="col-sm-10">
-                    <input
-                        type="text"
-                        className="form-control"
-                        placeholder="placeholder"
-                    />
                 </div>
             </div>
             <div className="form-group">
                 <label className="col-sm-2 col-sm-2 control-label">
-                    Password
-                </label>
+                    Phone No
+                                </label>
                 <div className="col-sm-10">
-                    <input
-                        type="password"
-                        className="form-control"
-                        placeholder="placeholder"
-                    />
-                </div>
-            </div> */}
-                <div className="form-group">
-                    <label className="col-sm-2 col-sm-2 control-label">
-                        Email
-                </label>
-                    <div className="col-sm-10">
-                        <input type="email" className="form-control" placeholder="Email" />
+                    <input type="text" className="form-control" maxLength={10} placeholder="Phone No" />
 
+                </div>
+            </div>
+            <div className="form-group">
+                <label className="col-sm-2 col-sm-2 control-label">
+                    State
+                                </label>
+                <div className="col-sm-10">
+                    <select className="form-control">
+                        <option>Punjab</option>
+                        <option>Delhi</option>
+                        <option>Haryana</option>
+                        <option>Bihar</option>
+                        <option>Uttar Pradesh</option>
+                    </select>
+                </div>
+            </div>
+            <div className="form-group">
+                <label className="col-sm-2 col-sm-2 control-label">
+                    City
+                                </label>
+                <div className="col-sm-10">
+                    <select className="form-control">
+                        <option>Bijnor</option>
+                        <option>Dhampur</option>
+                        <option>Jaipur</option>
+                        <option>Delhi</option>
+                        <option>Patna</option>
+                        <option>Pathankot</option>
+                        <option>GuruGram</option>
+                    </select>
+                </div>
+            </div>
+            <div className="form-group">
+                <label className="col-sm-2 col-sm-2 control-label">
+                    Dob
+                                </label>
+                <div className="col-sm-10">
+                    <DatePickerWithCalander />
+                </div>
+            </div>
+            {/* <div className="form-group">
+                                <label className="col-sm-2 col-sm-2 control-label">
+                                    Help text
+                                </label>
+                                <div className="col-sm-10">
+                                    <DatePickerWithDisabledCalander />
+                                </div>
+                            </div>
+    
+                            <div className="form-group">
+                                <label className="col-sm-2 col-sm-2 control-label">
+                                    Rounder
+                                </label>
+                                <div className="col-sm-10">
+                                    <input type="text" className="form-control round-form" />
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <label className="col-sm-2 col-sm-2 control-label">
+                                    Input focus
+                                </label>
+                                <div className="col-sm-10">
+                                    <input className="form-control" id="focusedInput" type="text"
+                                        defaultValue="This is focused..." placeholder="placeholder" />
+                                </div>
+                            </div>
+    
+                            <div className="form-group">
+                                <label className="col-sm-2 col-sm-2 control-label">
+                                    Placeholder
+                                </label>
+                                <div className="col-sm-10">
+                                    <input type="text" className="form-control" placeholder="placeholder" />
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <label className="col-sm-2 col-sm-2 control-label">
+                                    Password
+                                </label>
+                                <div className="col-sm-10">
+                                    <input type="password" className="form-control" placeholder="placeholder" />
+                                </div>
+                            </div> */}
+            <div className="form-group">
+                <label className="col-sm-2 col-sm-2 control-label">
+                    Email
+                                </label>
+                <div className="col-sm-10">
+                    <input type="email" className="form-control" placeholder="Email" />
+
+                </div>
+            </div>
+
+            <div className="form-group">
+                <div className="col-sm-10">
+                    <div className="form-send">
+                        <button type="submit" style={{ backgroundColor: '#4ECDC4', color: '#FFFFFF' }}
+                            className="btn btn-large">Send Message</button>
                     </div>
                 </div>
+            </div>
+        </form>
 
-                <div className="form-group">
-                    <div className="col-sm-10">
-                        <div className="form-send">
-                            <button type="submit" style={{ backgroundColor: '#4ECDC4', color: '#FFFFFF' }} className="btn btn-large">Send Message</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </Fragment>
+    </Fragment>
+
     )
 }
 

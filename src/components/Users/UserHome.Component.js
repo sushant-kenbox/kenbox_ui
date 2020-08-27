@@ -286,7 +286,7 @@ const UserHome = () => {
 
     }],
 
-    sizePerPage: 5,
+    sizePerPage: 10,
 
     pageStartIndex: 1,
 
