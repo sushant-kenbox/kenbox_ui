@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-
+import ModelBoxSuccess from "./../Common/ModelBoxSuccess"
 
 const UserAdd = () => {
-
+    const [show, setShow] = useState(false);
     const handleAddUser = (e) => {
         e.preventDefault();
+        setShow(true);
         console.log('handleAddUser')
     }
+
+    const handleCloseModel = () => setShow(false);
 
     const DatePickerWithCalander = () => {
         const [startDate, setStartDate] = useState(new Date());
@@ -16,7 +19,7 @@ const UserAdd = () => {
             <DatePicker selected={startDate} onChange={date => setStartDate(date)} className="form-control" />
         );
     };
-    
+
     const DatePickerWithDisabledCalander = () => {
         const [startDate, setStartDate] = useState(new Date());
         return (
@@ -33,36 +36,75 @@ const UserAdd = () => {
 
     return (
 
-        <form className="form-horizontal style-form" method="get" onSubmit={(e) => handleAddUser(e)}>
-            <div className="form-group">
-                <label className="col-sm-2 col-sm-2 control-label">
-                    Default
+        <Fragment>
+            <ModelBoxSuccess show={show}  handleCloseModel={handleCloseModel} />
+
+            <form className="form-horizontal style-form" method="get" onSubmit={(e) => handleAddUser(e)}>
+                <div className="form-group">
+                    <label className="col-sm-2 col-sm-2 control-label">
+                        First Name
                 </label>
-                <div className="col-sm-10">
-                    <input type="text" className="form-control" placeholder="placeholder" />
+                    <div className="col-sm-10">
+                        <input type="text" className="form-control" placeholder="First Name" />
+                    </div>
                 </div>
-            </div>
-            <div className="form-group">
-                <label className="col-sm-2 col-sm-2 control-label">
-                    Help text
+                <div className="form-group">
+                    <label className="col-sm-2 col-sm-2 control-label">
+                        Last Name
                 </label>
-                <div className="col-sm-10">
-                    <input type="text" className="form-control" placeholder="placeholder" />
-                    <span className="help-block">
-                        A block of help text that breaks onto a new line and may
-                        extend beyond one line.
-                    </span>
+                    <div className="col-sm-10">
+                        <input type="text" className="form-control" placeholder="Last Name" />
+
+                    </div>
                 </div>
-            </div>
-            <div className="form-group">
-                <label className="col-sm-2 col-sm-2 control-label">
-                    Help text
+                <div className="form-group">
+                    <label className="col-sm-2 col-sm-2 control-label">
+                        Phone No
                 </label>
-                <div className="col-sm-10">
-                    <DatePickerWithCalander />
+                    <div className="col-sm-10">
+                        <input type="text" className="form-control" maxLength={10} placeholder="Phone No" />
+
+                    </div>
                 </div>
-            </div>
-            <div className="form-group">
+                <div className="form-group">
+                    <label className="col-sm-2 col-sm-2 control-label">
+                        State
+                </label>
+                    <div className="col-sm-10">
+                        <select className="form-control">
+                            <option>Punjab</option>
+                            <option>Delhi</option>
+                            <option>Haryana</option>
+                            <option>Bihar</option>
+                            <option>Uttar Pradesh</option>
+                        </select>
+                    </div>
+                </div>
+                <div className="form-group">
+                    <label className="col-sm-2 col-sm-2 control-label">
+                        City
+                </label>
+                    <div className="col-sm-10">
+                        <select className="form-control">
+                            <option>Bijnor</option>
+                            <option>Dhampur</option>
+                            <option>Jaipur</option>
+                            <option>Delhi</option>
+                            <option>Patna</option>
+                            <option>Pathankot</option>
+                            <option>GuruGram</option>
+                        </select>
+                    </div>
+                </div>
+                <div className="form-group">
+                    <label className="col-sm-2 col-sm-2 control-label">
+                        Dob
+                </label>
+                    <div className="col-sm-10">
+                        <DatePickerWithCalander />
+                    </div>
+                </div>
+                {/* <div className="form-group">
                 <label className="col-sm-2 col-sm-2 control-label">
                     Help text
                 </label>
@@ -117,35 +159,26 @@ const UserAdd = () => {
                         placeholder="placeholder"
                     />
                 </div>
-            </div>
-            <div className="form-group">
-                <div className="col-lg-10">
-                    <p className="form-control-static">email@example.com</p>
-                </div>
-            </div>
-            <div className="form-group">
-                <label className="col-sm-2 col-sm-2 control-label">
-                    State
+            </div> */}
+                <div className="form-group">
+                    <label className="col-sm-2 col-sm-2 control-label">
+                        Email
                 </label>
-                <div className="col-sm-10">
-                    <select className="form-control">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
-            </div>
-            <div className="form-group">
-                <div className="col-sm-10">
-                    <div className="form-send">
-                        <button type="submit" style={{ backgroundColor: '#4ECDC4', color: '#FFFFFF' }} className="btn btn-large">Send Message</button>
+                    <div className="col-sm-10">
+                        <input type="email" className="form-control" placeholder="Email" />
+
                     </div>
                 </div>
-            </div>
-        </form>
 
+                <div className="form-group">
+                    <div className="col-sm-10">
+                        <div className="form-send">
+                            <button type="submit" style={{ backgroundColor: '#4ECDC4', color: '#FFFFFF' }} className="btn btn-large">Send Message</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </Fragment>
     )
 }
 

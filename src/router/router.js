@@ -1,5 +1,5 @@
 import React from "react"
-import { Route, Switch} from "react-router-dom"
+import { Route, Switch } from "react-router-dom"
 
 import AdminRouteList from "./AdminRouteList"
 import PublicRoute from './PublicRoute';
@@ -26,9 +26,7 @@ export default () => {
 					<Switch>
 						<AdminRouteList />
 					</Switch>
-
 				</MainAdminLayout>
-
 			</Route>
 
 			<Route render={(props) => <NoMatch {...props} />} />

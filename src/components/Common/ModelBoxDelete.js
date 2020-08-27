@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Modal from 'react-bootstrap/Modal'
 import { Button } from 'react-bootstrap'
 
-const ModelBox = ({ show, handleCloseModel, handleShowModel }) => {
+const ModelBoxDelete = ({ show, handleCloseModel, handleShowModel }) => {
     // const [show, setShow] = useState(false);
     // const handleCloseModel = () => setShow(false);
     // const handleShowModel = () => setShow(true);
@@ -16,15 +16,15 @@ const ModelBox = ({ show, handleCloseModel, handleShowModel }) => {
 
             <Modal show={show} onHide={handleCloseModel}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Modal heading</Modal.Title>
+                    <Modal.Title>Are you sure?</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+                <Modal.Body>Do you really want to delete these records? This process cannot be undone.</Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleCloseModel}>
                         Close
           </Button>
-                    <Button variant="primary" onClick={handleCloseModel}>
-                        Save Changes
+                    <Button variant="danger" onClick={handleCloseModel}>
+                        Delete
           </Button>
                 </Modal.Footer>
             </Modal>
@@ -32,4 +32,4 @@ const ModelBox = ({ show, handleCloseModel, handleShowModel }) => {
     );
 }
 
-export default ModelBox
+export default ModelBoxDelete

@@ -4,7 +4,7 @@ import filterFactory, { textFilter } from 'react-bootstrap-table2-filter';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 
-import ModelBox from "./../Common/Model"
+import ModelBoxDelete from "./../Common/ModelBoxDelete"
 
 
 
@@ -307,7 +307,7 @@ const UserHome = () => {
 console.log("-----",show)
   return (
     <Fragment>
-      <ModelBox show={show}  handleShowModel={handleDelete} handleCloseModel={handleCloseModel}/>
+      <ModelBoxDelete show={show}  handleShowModel={handleDelete} handleCloseModel={handleCloseModel}/>
 
       <BootstrapTable
 
