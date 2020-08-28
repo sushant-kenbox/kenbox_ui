@@ -2,23 +2,28 @@ import React, { Fragment, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import ModelBoxSuccess from "./../Common/ModelBoxSuccess"
+import { useForm } from 'react-hook-form';
+
+
 
 const UserAdd = () => {
     const [show, setShow] = useState(false);
-    const handleAddUser = (e) => {
-        e.preventDefault();
-        setShow(true);
-        console.log('handleAddUser')
+    // const handleAddUser = (e) => {
+    //     e.preventDefault();
+    //     setShow(true);
+    //     console.log('handleAddUser')
+    // }
+
+
+    const { register, handleSubmit, errors } = useForm();
+    const onSubmit = (data) => {
+        console.log(data);
+        console.log(errors);
     }
+
 
     const handleCloseModel = () => setShow(false);
 
-    const DatePickerWithCalander = () => {
-        const [startDate, setStartDate] = useState(new Date());
-        return (
-            <DatePicker selected={startDate} onChange={date => setStartDate(date)} className="form-control" />
-        );
-    };
 
     const DatePickerWithDisabledCalander = () => {
         const [startDate, setStartDate] = useState(new Date());
@@ -37,13 +42,13 @@ const UserAdd = () => {
     return (
         <Fragment>
             <ModelBoxSuccess show={show} handleCloseModel={handleCloseModel} />
-            <form className="form-horizontal style-form" method="get" onSubmit={(e) => handleAddUser(e)}>
+            <form className="form-horizontal style-form" method="get" onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-group">
                     <label className="col-sm-2 col-sm-2 control-label">
                         First Name
                                 </label>
                     <div className="col-sm-10">
-                        <input type="text" className="form-control" placeholder="First Name" />
+                        <input type="text" className="form-control" name="fname" placeholder="First Name" ref={register({ required: true })}/>
                     </div>
                 </div>
                 <div className="form-group">
@@ -51,23 +56,24 @@ const UserAdd = () => {
                         Last Name
                                 </label>
                     <div className="col-sm-10">
-                        <input type="text" className="form-control" placeholder="Last Name" />
+                        <input type="text" className="form-control" placeholder="Last Name" name="lname"
+                            ref={register({ required: true })} />
 
                     </div>
                 </div>
                 <div className="form-group">
                     <label className="col-sm-2 col-sm-2 control-label">
                         Phone No
-                                </label>
+                    </label>
                     <div className="col-sm-10">
-                        <input type="text" className="form-control" maxLength={10} placeholder="Phone No" />
+                        <input type="text" className="form-control" placeholder="Phone No" name="phone"/>
 
                     </div>
                 </div>
                 <div className="form-group">
                     <label className="col-sm-2 col-sm-2 control-label">
                         State
-                                </label>
+                    </label>
                     <div className="col-sm-10">
                         <select className="form-control">
                             <option>Punjab</option>
@@ -99,59 +105,42 @@ const UserAdd = () => {
                         Dob
                                 </label>
                     <div className="col-sm-10">
-                        <DatePickerWithCalander />
+                        <DatePickerWithDisabledCalander />
                     </div>
                 </div>
-                {/* <div className="form-group">
-                                <label className="col-sm-2 col-sm-2 control-label">
-                                    Help text
-                                </label>
-                                <div className="col-sm-10">
-                                    <DatePickerWithDisabledCalander />
-                                </div>
-                            </div>
-    
-                            <div className="form-group">
-                                <label className="col-sm-2 col-sm-2 control-label">
-                                    Rounder
-                                </label>
-                                <div className="col-sm-10">
-                                    <input type="text" className="form-control round-form" />
-                                </div>
-                            </div>
-                            <div className="form-group">
-                                <label className="col-sm-2 col-sm-2 control-label">
-                                    Input focus
-                                </label>
-                                <div className="col-sm-10">
-                                    <input className="form-control" id="focusedInput" type="text"
-                                        defaultValue="This is focused..." placeholder="placeholder" />
-                                </div>
-                            </div>
-    
-                            <div className="form-group">
-                                <label className="col-sm-2 col-sm-2 control-label">
-                                    Placeholder
-                                </label>
-                                <div className="col-sm-10">
-                                    <input type="text" className="form-control" placeholder="placeholder" />
-                                </div>
-                            </div>
-                            <div className="form-group">
-                                <label className="col-sm-2 col-sm-2 control-label">
-                                    Password
-                                </label>
-                                <div className="col-sm-10">
-                                    <input type="password" className="form-control" placeholder="placeholder" />
-                                </div>
-                            </div> */}
+
                 <div className="form-group">
                     <label className="col-sm-2 col-sm-2 control-label">
                         Email
-                                </label>
+                    </label>
                     <div className="col-sm-10">
-                        <input type="email" className="form-control" placeholder="Email" />
+                        <input type="email" className="form-control" placeholder="Email" name="email"
+                            ref={register({
+                                required: "required",
+                                pattern: {
+                                    value: /S+@S+.S+/,
+                                    message: "Entered value does not match email format"
+                                }
+                            })} />
 
+                    </div>
+                </div>
+                <div className="form-group">
+                    <label className="col-sm-2 col-sm-2 control-label">
+                        Gender
+                    </label>
+                    <div className="col-sm-10">
+                        <div className="radio">
+                            <label className="pl-1">
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" defaultChecked />
+
+                            </label>
+                            <label className="pl-1">Male</label>
+                            <label className="pl-1">
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" />
+                            </label>
+                            <label className="pl-1">Female</label>
+                        </div>
                     </div>
                 </div>
 
@@ -159,7 +148,7 @@ const UserAdd = () => {
                     <div className="col-sm-10">
                         <div className="form-send">
                             <button type="submit" style={{ backgroundColor: '#4ECDC4', color: '#FFFFFF' }}
-                                className="btn btn-large">Send Message</button>
+                                className="btn btn-large">Save</button>
                         </div>
                     </div>
                 </div>

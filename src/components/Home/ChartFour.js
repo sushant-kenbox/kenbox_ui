@@ -9,7 +9,7 @@ const ChartFour = () => {
     <div className="col-lg-4 col-md-4 col-sm-4 mb">
       <div className="product-panel-2 pn">
         <div className="badge badge-hot">HOT</div>
-        <img src="img/product.jpg" width={200} alt />
+        <img src="img/product.jpg" width={200} alt="alt" />
         <h5 className="mt">Flat Pack Heritage</h5>
         <h6>TOTAL SALES: 1388</h6>
         <button className="btn btn-small btn-theme04">

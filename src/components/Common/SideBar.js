@@ -15,7 +15,7 @@ const SideBar = () => {
         <ul className="sidebar-menu" id="nav-accordion">
           <p className="centered">
             <a href="profile.html">
-              <img src={mypic} className="img-circle" width={80} /> 
+              <img src={mypic} className="img-circle" width={80}  alt="alt"/> 
             </a>
           </p>
           <h5 className="centered">Varun</h5>

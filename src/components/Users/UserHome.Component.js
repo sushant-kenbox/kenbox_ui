@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from "react";
 import BootstrapTable from 'react-bootstrap-table-next';
-import ToolkitProvider, { CSVExport, Search } from 'react-bootstrap-table2-toolkit';
+//import ToolkitProvider , { CSVExport, Search } from 'react-bootstrap-table2-toolkit';
+import ToolkitProvider  from 'react-bootstrap-table2-toolkit';
 import filterFactory, { textFilter } from 'react-bootstrap-table2-filter';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
@@ -8,13 +9,12 @@ import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import ModelBoxDelete from "./../Common/ModelBoxDelete"
 
 
-
 const UserHome = () => {
 
   const [show, setShow] = useState(false);
 
-  const { SearchBar } = Search;
-  const { ExportCSVButton } = CSVExport;
+  //const { SearchBar } = Search;
+  //const { ExportCSVButton } = CSVExport;
 
 
 
@@ -27,6 +27,7 @@ const UserHome = () => {
       "city": "Miracletown",
       "state": "Louisiana",
       "country": "Uzbekistan",
+      "status": 'Active',
       "__v": 0
     },
     {
@@ -36,6 +37,7 @@ const UserHome = () => {
       "city": "Huelburgh",
       "state": "Arkansas",
       "country": "San Marino",
+      "status": 'Inactive',
       "__v": 0
     },
     {
@@ -45,6 +47,7 @@ const UserHome = () => {
       "city": "West Chazberg",
       "state": "California",
       "country": "Turkmenistan",
+      "status": 'Active',
       "__v": 0
     },
     {
@@ -54,6 +57,7 @@ const UserHome = () => {
       "city": "Stokesmouth",
       "state": "Kentucky",
       "country": "French Guiana",
+      "status": 'Inactive',
       "__v": 0
     },
     {
@@ -63,6 +67,7 @@ const UserHome = () => {
       "city": "Lake Tyrel",
       "state": "Massachusetts",
       "country": "Rwanda",
+      "status": 'Active',
       "__v": 0
     },
     {
@@ -72,6 +77,7 @@ const UserHome = () => {
       "city": "West Lessie",
       "state": "Arkansas",
       "country": "Zimbabwe",
+      "status": 'Inactive',
       "__v": 0
     },
     {
@@ -81,6 +87,7 @@ const UserHome = () => {
       "city": "North Anastacio",
       "state": "Virginia",
       "country": "Slovakia (Slovak Republic)",
+      "status": 'Active',
       "__v": 0
     },
     {
@@ -90,6 +97,7 @@ const UserHome = () => {
       "city": "Jacobiport",
       "state": "Florida",
       "country": "Virgin Islands, U.S.",
+      "status": 'Inactive',
       "__v": 0
     },
     {
@@ -99,6 +107,7 @@ const UserHome = () => {
       "city": "South Lavernchester",
       "state": "Georgia",
       "country": "United States of America",
+      "status": 'Active',
       "__v": 0
     },
     {
@@ -108,6 +117,7 @@ const UserHome = () => {
       "city": "West Talonberg",
       "state": "Massachusetts",
       "country": "Lesotho",
+      "status": 'Active',
       "__v": 0
     },
     {
@@ -117,6 +127,7 @@ const UserHome = () => {
       "city": "Waelchishire",
       "state": "Indiana",
       "country": "Peru",
+      "status": 'Inactive',
       "__v": 0
     },
     {
@@ -126,6 +137,7 @@ const UserHome = () => {
       "city": "Lake Nasir",
       "state": "Michigan",
       "country": "Guernsey",
+      "status": 'Inactive',
       "__v": 0
     },
     {
@@ -135,6 +147,7 @@ const UserHome = () => {
       "city": "Holliefurt",
       "state": "Ohio",
       "country": "Gambia",
+      "status": 'Active',
       "__v": 0
     },
     {
@@ -144,6 +157,7 @@ const UserHome = () => {
       "city": "Ruthland",
       "state": "Utah",
       "country": "Tonga",
+      "status": 'Active',
       "__v": 0
     },
     {
@@ -153,6 +167,7 @@ const UserHome = () => {
       "city": "East Camden",
       "state": "Maryland",
       "country": "Chile",
+      "status": 'Inactive',
       "__v": 0
     },
     {
@@ -162,6 +177,7 @@ const UserHome = () => {
       "city": "North Demarioburgh",
       "state": "Massachusetts",
       "country": "Togo",
+      "status": 'Active',
       "__v": 0
     },
     {
@@ -171,6 +187,7 @@ const UserHome = () => {
       "city": "Royceshire",
       "state": "Arkansas",
       "country": "Guinea-Bissau",
+      "status": 'Inactive',
       "__v": 0
     },
     {
@@ -180,6 +197,7 @@ const UserHome = () => {
       "city": "West Winnifred",
       "state": "Delaware",
       "country": "Netherlands",
+      "status": 'Inactive',
       "__v": 0
     },
     {
@@ -189,6 +207,7 @@ const UserHome = () => {
       "city": "Johnsonmouth",
       "state": "South Dakota",
       "country": "United Arab Emirates",
+      "status": 'Active',
       "__v": 0
     },
     {
@@ -198,73 +217,80 @@ const UserHome = () => {
       "city": "New Manuelachester",
       "state": "New Jersey",
       "country": "Norfolk Island",
+      "status": 'Inactive',
       "__v": 0
     }
 
-  ],
+  ]
 
-    columns = [
+  const columns = [
 
-      {
-        dataField: 'firstname',
-        text: 'First Name',
-        filter: textFilter()
-      },
+    {
+      dataField: 'firstname',
+      text: 'First Name',
+      filter: textFilter()
+    },
 
-      {
-        dataField: 'lastname',
-        text: 'Last Name',
-        sort: true,
-        filter: textFilter()
+    {
+      dataField: 'lastname',
+      text: 'Last Name',
+      sort: true,
+      filter: textFilter()
 
-      },
-      {
-        dataField: 'phonenumber',
-        text: 'Phone',
-        sort: true,
-        filter: textFilter()
-      },
-      {
-        dataField: 'city',
-        text: 'City',
-        sort: true,
-        filter: textFilter()
-      },
-      {
-        dataField: 'state',
-        text: 'State',
-        sort: true,
-        filter: textFilter()
-      },
-      {
-        dataField: 'action',
-        text: 'Action',
-        sort: false,
-        formatter: (cell, row, rowIndex, extraData) => (
-          <Fragment>
-            <button type="button" className="mr-1  btn btn-primary btn-sm" onClick={(e) => handleView(cell, row, rowIndex, extraData)}><i className="fa fa-eye"></i></button>
-            <button type="button" className="mr-1 btn btn-success btn-sm" onClick={(e) => handleEdit(cell, row, rowIndex, extraData)}><i className="fa fa-edit"></i></button>
-            <button type="button" className="mr-1 btn btn-danger btn-sm" onClick={(e) => handleDelete(cell, row, rowIndex, extraData)}><i className="fa fa-trash"></i></button>
-          </Fragment>
-        ),
-        // events: {
-        //   onClick: (e, column, columnIndex, row, rowIndex) => {
-        //     //console.log(e);
-        //     console.log(column);
-        //     console.log(columnIndex);
-        //     console.log(row);
-        //     console.log(rowIndex);
-        //     console.log('Click on Product ID field', row.id);
-        //   }
-        // }
+    },
+    {
+      dataField: 'phonenumber',
+      text: 'Phone',
+      sort: true,
+      filter: textFilter()
+    },
+    {
+      dataField: 'city',
+      text: 'City',
+      sort: true,
+      filter: textFilter()
+    },
+    {
+      dataField: 'state',
+      text: 'State',
+      sort: true,
+      filter: textFilter()
+    },
+    {
+      dataField: 'status',
+      text: 'Status',
+      sort: true,
+      filter: textFilter()
+    },
+    {
+      dataField: 'action',
+      text: 'Action',
+      sort: false,
+      formatter: (cell, row, rowIndex, extraData) => (
+        <Fragment>
+          <button type="button" className="mr-1  btn btn-primary btn-sm" onClick={(e) => handleView(cell, row, rowIndex, extraData)}><i className="fa fa-eye"></i></button>
+          <button type="button" className="mr-1 btn btn-success btn-sm" onClick={(e) => handleEdit(cell, row, rowIndex, extraData)}><i className="fa fa-edit"></i></button>
+          <button type="button" className="mr-1 btn btn-danger btn-sm" onClick={(e) => handleDelete(cell, row, rowIndex, extraData)}><i className="fa fa-trash"></i></button>
+        </Fragment>
+      ),
+      // events: {
+      //   onClick: (e, column, columnIndex, row, rowIndex) => {
+      //     //console.log(e);
+      //     console.log(column);
+      //     console.log(columnIndex);
+      //     console.log(row);
+      //     console.log(rowIndex);
+      //     console.log('Click on Product ID field', row.id);
+      //   }
+      // }
 
-      }]
+    }]
 
 
-  const selectRow = {
-    mode: 'checkbox',
-    clickToSelect: true
-  };
+  // const selectRow = {
+  //   mode: 'checkbox',
+  //   clickToSelect: true
+  // };
 
 
   const options = {
@@ -340,8 +366,6 @@ const UserHome = () => {
   return (
     <Fragment>
       <ModelBoxDelete show={show} handleShowModel={handleDelete} handleCloseModel={handleCloseModel} />
-
-
       <ToolkitProvider
         keyField="id"
         data={products}
@@ -352,7 +376,7 @@ const UserHome = () => {
         {
           props => (
             <div>
-              <MyExportCSV { ...props.csvProps } />
+              <MyExportCSV {...props.csvProps} />
               <BootstrapTable
                 {...props.baseProps}
                 striped
