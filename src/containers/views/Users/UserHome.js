@@ -21,10 +21,10 @@ class UserHome extends React.Component {
           </div>
 
           <div className="container" style={{ marginTop: 50 }}>
-            <button type="button" className="mr-1  btn btn-primary btn-sm" onClick={this.handleAddUser}>
+            <button type="button" className="mr-1  btn btn-primary btn-sm mt-20" onClick={this.handleAddUser}>
               <i className="fa fa-user-plus">
               </i></button>
-            <br />
+
             <UserHomeComponent />
           </div>
 

@@ -1,5 +1,6 @@
-import React, { Fragment,useState } from "react";
+import React, { Fragment, useState } from "react";
 import BootstrapTable from 'react-bootstrap-table-next';
+import ToolkitProvider, { CSVExport, Search } from 'react-bootstrap-table2-toolkit';
 import filterFactory, { textFilter } from 'react-bootstrap-table2-filter';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
@@ -11,6 +12,12 @@ import ModelBoxDelete from "./../Common/ModelBoxDelete"
 const UserHome = () => {
 
   const [show, setShow] = useState(false);
+
+  const { SearchBar } = Search;
+  const { ExportCSVButton } = CSVExport;
+
+
+
 
   const products = [
     {
@@ -254,19 +261,10 @@ const UserHome = () => {
       }]
 
 
-  const handleView = (cell, row, rowIndex, extraData) => {
-    console.log('handleView', row, rowIndex)
-  }
-  const handleEdit = (cell, row, rowIndex, extraData) => {
-    console.log('handleEdit', row, rowIndex)
-  }
-  const handleDelete = (cell, row, rowIndex, extraData) => {
-    setShow(true);
-    console.log('handleDelete', row, rowIndex)
-  }
-
-  const handleCloseModel = () => setShow(false);
- // const handleShowModel = () => setShow(true);
+  const selectRow = {
+    mode: 'checkbox',
+    clickToSelect: true
+  };
 
 
   const options = {
@@ -304,12 +302,82 @@ const UserHome = () => {
 
   };
 
-console.log("-----",show)
+
+
+
+  const handleView = (cell, row, rowIndex, extraData) => {
+    console.log('handleView', row, rowIndex)
+  }
+  const handleEdit = (cell, row, rowIndex, extraData) => {
+    console.log('handleEdit', row, rowIndex)
+  }
+  const handleDelete = (cell, row, rowIndex, extraData) => {
+    setShow(true);
+    console.log('handleDelete', row, rowIndex)
+  }
+
+  const handleCloseModel = () => setShow(false);
+  // const handleShowModel = () => setShow(true);
+
+
+
+  const MyExportCSV = (props) => {
+    const handleExportCsv = () => {
+      props.onExport();
+    };
+    return (
+      <div>
+        <button className="btn btn-success float-right mb-2" onClick={handleExportCsv}>Export to CSV</button>
+      </div>
+    );
+  };
+
+
+
+
+
+  console.log("-----", show)
   return (
     <Fragment>
-      <ModelBoxDelete show={show}  handleShowModel={handleDelete} handleCloseModel={handleCloseModel}/>
+      <ModelBoxDelete show={show} handleShowModel={handleDelete} handleCloseModel={handleCloseModel} />
 
-      <BootstrapTable
+
+      <ToolkitProvider
+        keyField="id"
+        data={products}
+        columns={columns}
+        exportCSV={{ onlyExportFiltered: true, exportAll: false }}
+        search
+      >
+        {
+          props => (
+            <div>
+              <MyExportCSV { ...props.csvProps } />
+              <BootstrapTable
+                {...props.baseProps}
+                striped
+
+                hover
+
+                keyField='firstname'
+
+                data={products}
+
+                columns={columns}
+
+                filter={filterFactory()}
+
+                pagination={paginationFactory(options)}
+              />
+            </div>
+          )
+        }
+      </ToolkitProvider>
+
+
+
+
+      {/* <BootstrapTable
 
         striped
 
@@ -324,7 +392,7 @@ console.log("-----",show)
         filter={filterFactory()}
 
         pagination={paginationFactory(options)}
-      />
+      /> */}
     </Fragment>
 
   )
