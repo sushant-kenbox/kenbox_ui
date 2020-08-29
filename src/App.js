@@ -3,7 +3,7 @@ import Routers from "./router/router";
 function App() {
 	return (
 
-		<section id="container" className="ABC">
+		<section id="container">
 			<Routers />
 		</section>
 
