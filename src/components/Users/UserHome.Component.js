@@ -1,12 +1,11 @@
 import React, { Fragment, useState } from "react";
 import BootstrapTable from 'react-bootstrap-table-next';
 //import ToolkitProvider , { CSVExport, Search } from 'react-bootstrap-table2-toolkit';
-import ToolkitProvider  from 'react-bootstrap-table2-toolkit';
+import ToolkitProvider from 'react-bootstrap-table2-toolkit';
 import filterFactory, { textFilter } from 'react-bootstrap-table2-filter';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
-
-import ModelBoxDelete from "./../Common/ModelBoxDelete"
+import { ModelBoxDelete } from "./../Model"
 
 
 const UserHome = () => {
@@ -15,9 +14,6 @@ const UserHome = () => {
 
   //const { SearchBar } = Search;
   //const { ExportCSVButton } = CSVExport;
-
-
-
 
   const products = [
     {

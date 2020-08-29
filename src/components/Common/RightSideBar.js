@@ -1,7 +1,6 @@
 import React from "react"
 const RightSideBar = () => {
-	console.log("%c RENDER Nav', 'color: orange; font-size: 20px")
-
+	
 	return (
 
         <div className="col-lg-3 ds">

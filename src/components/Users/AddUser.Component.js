@@ -2,8 +2,9 @@ import React, { Fragment, useState } from "react";
 import DatePicker from "react-datepicker";
 import moment from 'moment';
 import "react-datepicker/dist/react-datepicker.css";
-import ModelBoxSuccess from "./../Common/ModelBoxSuccess"
+import { ModelBoxSuccess } from "./../Model"
 import { useForm } from 'react-hook-form';
+import states from "./../../data/states.json"
 
 
 
@@ -24,6 +25,8 @@ const UserAdd = () => {
         }
     );
 
+
+
     const DatePickerWithDisabledCalander = () => {
 
         return (
@@ -38,7 +41,6 @@ const UserAdd = () => {
         );
     };
 
-
     const { register, handleSubmit, errors } = useForm();
 
 
@@ -50,7 +52,6 @@ const UserAdd = () => {
             [e.target.name]: e.target.value,
         });
     }
-
 
 
     const onSubmit = (e) => {
@@ -65,9 +66,6 @@ const UserAdd = () => {
 
 
     const handleCloseModel = () => setShow(false);
-
-
-
 
     return (
         <Fragment>
@@ -162,11 +160,10 @@ const UserAdd = () => {
                                 required: "Choose state value"
                             })}>
                             <option value="">Select State</option>
-                            <option>Punjab</option>
-                            <option>Delhi</option>
-                            <option>Haryana</option>
-                            <option>Bihar</option>
-                            <option>Uttar Pradesh</option>
+                            {states.map((state, index) => {
+                                console.log(state)
+                                return <option value={state.code}>{state.name}</option>
+                            })}
                         </select>
                         <span className="error text-danger pt-5">{errors.state && errors.state.message}</span>
                     </div>
