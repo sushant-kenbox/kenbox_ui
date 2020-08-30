@@ -5,6 +5,8 @@ import "react-datepicker/dist/react-datepicker.css";
 import { ModelBoxSuccess } from "./../Model"
 import { useForm } from 'react-hook-form';
 import states from "./../../data/states.json"
+import cities from "./../../data/city.json"
+
 
 
 
@@ -24,8 +26,6 @@ const UserAdd = () => {
             gender: "",
         }
     );
-
-
 
     const DatePickerWithDisabledCalander = () => {
 
@@ -63,6 +63,12 @@ const UserAdd = () => {
         //console.log(userState, "=======", startDate , "--------" , finalState)
     };
 
+    const selectedCity = cities.cityList.filter((city) => city.State == userState.state)
+
+    const finalCity = [];
+
+    selectedCity.sort((a, b) => a.City.localeCompare(b.City)).
+                 map(x => finalCity.filter(a => a.City == x.City).length > 0 ? null : finalCity.push(x))
 
 
     const handleCloseModel = () => setShow(false);
@@ -161,8 +167,7 @@ const UserAdd = () => {
                             })}>
                             <option value="">Select State</option>
                             {states.map((state, index) => {
-                                console.log(state)
-                                return <option value={state.code}>{state.name}</option>
+                                return <option value={state.code} key={index}>{state.name}</option>
                             })}
                         </select>
                         <span className="error text-danger pt-5">{errors.state && errors.state.message}</span>
@@ -179,13 +184,9 @@ const UserAdd = () => {
                                 required: "Choose city value"
                             })}>
                             <option value="">Select City</option>
-                            <option>Bijnor</option>
-                            <option>Dhampur</option>
-                            <option>Jaipur</option>
-                            <option>Delhi</option>
-                            <option>Patna</option>
-                            <option>Pathankot</option>
-                            <option>GuruGram</option>
+                            {finalCity.map((city, index) => {
+                                return <option value={city.Pincode} key={index}>{city.City}</option>
+                            })}
                         </select>
                         <span className="error text-danger pt-5">{errors.city && errors.city.message}</span>
                     </div>
