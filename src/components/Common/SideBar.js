@@ -15,12 +15,12 @@ const SideBar = () => {
         <ul className="sidebar-menu" id="nav-accordion">
           <p className="centered">
             <a href="profile.html">
-              <img src={mypic} className="img-circle" width={80}  alt="alt"/> 
+              <img src={mypic} className="img-circle" width={80} alt="alt" />
             </a>
           </p>
           <h5 className="centered">Varun</h5>
           <li className="mt">
-            <Link className="active" to="/admin/dashboard">
+            <Link className="active" to="/admin/users/dashboard">
               <i className="fa fa-dashboard" />
               <span>Dashboard</span>
             </Link>
@@ -30,27 +30,18 @@ const SideBar = () => {
               <span><SubMenu title="My Account">
                 <MenuItem className="sub"><Link to="/login">Login</Link></MenuItem>
                 <MenuItem className="sub"><Link to="/registration">Signup</Link></MenuItem>
-                <MenuItem className="sub"><Link to="/admin/addUser">Add User</Link></MenuItem>
-                <MenuItem className="sub"><Link to="/admin/userDetails">User Details</Link></MenuItem>
+                <MenuItem className="sub"><Link to="/admin/users/add">Add User</Link></MenuItem>
+                <MenuItem className="sub"><Link to="/admin/users/list">User List</Link></MenuItem>
               </SubMenu></span>
             </Menu>
             <Menu iconShape="square" className="sub-menu">
               <span><SubMenu title="Employee">
-                <MenuItem className="sub"><Link to="/login">Login</Link></MenuItem>
-                <MenuItem className="sub"><Link to="/registration">Signup</Link></MenuItem>
-                <MenuItem className="sub"><Link to="/admin/userDetails">User Details</Link></MenuItem>
+                <MenuItem className="sub"><Link to="/admin/users/add">Add Employee</Link></MenuItem>
+                <MenuItem className="sub"><Link to="/admin/users/list">Employee List</Link></MenuItem>
               </SubMenu></span>
             </Menu>
-            <Menu iconShape="square" className="sub-menu">
-              <span><SubMenu title="Payroll">
-                <MenuItem className="sub"><Link to="/login">Login</Link></MenuItem>
-                <MenuItem className="sub"><Link to="/registration">Signup</Link></MenuItem>
-                <MenuItem className="sub"><Link to="/admin/userDetails">User Details</Link></MenuItem>
-              </SubMenu></span>
-            </Menu>
-            
-            </ProSidebar>
-          
+          </ProSidebar>
+
           {/* <li className="mt">
               <a className="active" href="index.html">
                 <i className="fa fa-dashboard" />

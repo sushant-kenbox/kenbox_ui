@@ -1,8 +1,7 @@
 import React from "react"
 import { Route, Switch } from "react-router-dom"
 import Main from "../components/Home/"
-import UserHome from "./../containers/views/Users/UserHome"
-import UserAdd from "./../containers/views/Users/UserAdd"
+import { UserHome, UserAdd } from "./../containers/views/Users/"
 import NoMatch from "../components/Common/NoMatch"
 import PrivateRoute from "./PrivateRoute";
 
@@ -13,21 +12,21 @@ const routes = [
 		Component: Main,
 	},
 	{
-		path: "/admin/dashboard",
+		path: "/admin/users/dashboard",
 		exact: true,
 		Component: Main,
 	},
 	{
-		path: "/admin/userDetails",
+		path: "/admin/users/list",
 		exact: true,
 		Component: UserHome,
 	},
 	{
-		path: "/admin/addUser",
+		path: "/admin/users/add",
 		exact: true,
 		Component: UserAdd,
-	}
-
+	},
+	
 ]
 
 const index = () => (

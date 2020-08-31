@@ -2,12 +2,12 @@ import React from "react";
 import UserHomeComponent from "./../../../components/Users/UserHome.Component"
 
 
-class UserHome extends React.Component {
+export class UserHome extends React.Component {
 
 
   handleAddUser = () => {
     console.log('handleAddUser', this.props.history)
-    this.props.history.push("/admin/addUser")
+    this.props.history.push("/admin/users/add")
   }
 
   render() {

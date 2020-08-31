@@ -6,12 +6,11 @@ import PublicRoute from './PublicRoute';
 
 //import MainDefault from "../containers/layouts/Default"
 import MainAdminLayout from "../containers/layouts/MainAdmin"
-
+import NoMatch from "../components/Common/NoMatch"
 // views
 
 import Login from "../containers/views/Users/Login"
 import Registration from "../containers/views/Users/Registration"
-import NoMatch from "../components/Common/NoMatch"
 
 
 
@@ -21,7 +20,7 @@ export default () => {
 		<Switch>
 			<PublicRoute restricted={true} exact path={["/", "/login", "/defaultPath"]} component={Login} />
 			<PublicRoute restricted={true} path='/registration' component={Registration} />
-			<Route path='/admin/:path?' exact>
+			<Route path='/admin/:path/:path?' exact>
 				<MainAdminLayout>
 					<Switch>
 						<AdminRouteList />

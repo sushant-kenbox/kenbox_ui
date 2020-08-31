@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import AddUserComponent from "./../../../components/Users/AddUser.Component"
-class UserAdd extends Component {
+export class UserAdd extends Component {
 
 
     handleAddUser = (e) => {
@@ -32,5 +32,3 @@ class UserAdd extends Component {
         )
     }
 }
-
-export default UserAdd;
