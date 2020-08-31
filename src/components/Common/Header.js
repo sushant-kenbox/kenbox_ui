@@ -12,7 +12,7 @@ const Header = () => {
   }
 
 
-  { condition ? document.body.classList.add('sidebar-closed') : document.body.classList.remove('sidebar-closed') }
+  condition ? document.body.classList.add('sidebar-closed') : document.body.classList.remove('sidebar-closed') 
 
   return (
 

@@ -47,7 +47,7 @@ const RightSideBar = () => {
                   </div>
                   <div className="details">
                     <p>
-                      <muted>Just Now</muted>
+                      Just Now
                       <br />
                       <a href="#">Paul Rudd</a> purchased an item.
                       <br />
@@ -63,7 +63,7 @@ const RightSideBar = () => {
                   </div>
                   <div className="details">
                     <p>
-                      <muted>2 Minutes Ago</muted>
+                      2 Minutes Ago
                       <br />
                       <a href="#">James Brown</a> subscribed to your newsletter.
                       <br />
@@ -79,7 +79,7 @@ const RightSideBar = () => {
                   </div>
                   <div className="details">
                     <p>
-                      <muted>3 Hours Ago</muted>
+                      3 Hours Ago
                       <br />
                       <a href="#">Diana Kennedy</a> purchased a year
                       subscription.
@@ -96,7 +96,7 @@ const RightSideBar = () => {
                   </div>
                   <div className="details">
                     <p>
-                      <muted>7 Hours Ago</muted>
+                      7 Hours Ago
                       <br />
                       <a href="#">Brando Page</a> purchased a year subscription.
                       <br />
@@ -113,14 +113,14 @@ const RightSideBar = () => {
                       src="img/ui-divya.jpg"
                       width="35px"
                       height="35px"
-                      align
+                      
                     />
                   </div>
                   <div className="details">
                     <p>
                       <a href="#">DIVYA MANIAN</a>
                       <br />
-                      <muted>Available</muted>
+                      Available
                     </p>
                   </div>
                 </div>
@@ -132,14 +132,14 @@ const RightSideBar = () => {
                       src="img/ui-sherman.jpg"
                       width="35px"
                       height="35px"
-                      align
+
                     />
                   </div>
                   <div className="details">
                     <p>
                       <a href="#">DJ SHERMAN</a>
                       <br />
-                      <muted>I am Busy</muted>
+                      I am Busy
                     </p>
                   </div>
                 </div>
@@ -151,14 +151,13 @@ const RightSideBar = () => {
                       src="img/ui-danro.jpg"
                       width="35px"
                       height="35px"
-                      align
                     />
                   </div>
                   <div className="details">
                     <p>
                       <a href="#">DAN ROGERS</a>
                       <br />
-                      <muted>Available</muted>
+                      Available
                     </p>
                   </div>
                 </div>
@@ -170,49 +169,18 @@ const RightSideBar = () => {
                       src="img/ui-zac.jpg"
                       width="35px"
                       height="35px"
-                      align
+                      
                     />
                   </div>
                   <div className="details">
                     <p>
                       <a href="#">Zac Sniders</a>
                       <br />
-                      <muted>Available</muted>
+                      Available
                     </p>
                   </div>
                 </div>
-                {}
-                {/* <div id="calendar" className="mb">
-                  <div className="panel green-panel no-margin">
-                    <div className="panel-body">
-                      <div
-                        id="date-popover"
-                        className="popover top"
-                        style={{
-                          cursor: "pointer",
-                          disadding: "block",
-                          marginLeft: "33%",
-                          marginTop: "-50px",
-                          width: "175px"
-                        }}
-                      >
-                        <div className="arrow" />
-                        <h3
-                          className="popover-title"
-                          style={{
-                            disadding: "none"
-                          }}
-                        />
-                        <div
-                          id="date-popover-content"
-                          className="popover-content"
-                        />
-                      </div>
-                      <div id="my-calendar" />
-                    </div>
-                  </div>
-                </div>
-                {} */}
+                
               </div>
             )
 

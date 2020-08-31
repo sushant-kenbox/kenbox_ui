@@ -6,7 +6,7 @@ import ChartFour from "./ChartFour"
 
 
 const Chart = () => {
-	console.log("%c RENDER Nav', 'color: orange; font-size: 20px")
+	//console.log("%c RENDER Nav', 'color: orange; font-size: 20px")
 
 	return (
 

@@ -1,7 +1,7 @@
 import React from "react"
 
 const ChartThree = () => {
-  console.log("%c RENDER Nav', 'color: orange; font-size: 20px")
+  //console.log("%c RENDER Nav', 'color: orange; font-size: 20px")
 
   return (
 
@@ -32,7 +32,7 @@ const ChartThree = () => {
           </div>
           <div className="col-md-9">
             <p>
-              <name>Dan Rogers</name>
+              Dan Rogers
               sent you a message.
             </p>
             <p className="small">3 hours ago</p>

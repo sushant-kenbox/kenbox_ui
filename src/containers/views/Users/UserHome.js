@@ -17,7 +17,7 @@ export class UserHome extends React.Component {
 
         <div className="container">
 
-          <div className="row" className="hdr">
+          <div className="row hdr">
           </div>
 
           <div className="container" style={{ marginTop: 50 }}>

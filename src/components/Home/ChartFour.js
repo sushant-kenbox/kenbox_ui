@@ -1,7 +1,7 @@
 import React from "react"
 
 const ChartFour = () => {
-	console.log("%c RENDER Nav', 'color: orange; font-size: 20px")
+	//console.log("%c RENDER Nav', 'color: orange; font-size: 20px")
 
 	return (
 
