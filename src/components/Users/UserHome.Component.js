@@ -12,9 +12,6 @@ const UserHome = () => {
 
   const [show, setShow] = useState(false);
 
-  //const { SearchBar } = Search;
-  //const { ExportCSVButton } = CSVExport;
-
   const products = [
     {
       "firstname": "Meagan",
@@ -262,6 +259,7 @@ const UserHome = () => {
       dataField: 'action',
       text: 'Action',
       sort: false,
+      csvExport: false,
       formatter: (cell, row, rowIndex, extraData) => (
         <Fragment>
           <button type="button" className="mr-1  btn btn-primary btn-sm" onClick={(e) => handleView(cell, row, rowIndex, extraData)}><i className="fa fa-eye"></i></button>
@@ -271,22 +269,16 @@ const UserHome = () => {
       ),
       // events: {
       //   onClick: (e, column, columnIndex, row, rowIndex) => {
-      //     //console.log(e);
-      //     console.log(column);
-      //     console.log(columnIndex);
-      //     console.log(row);
-      //     console.log(rowIndex);
-      //     console.log('Click on Product ID field', row.id);
-      //   }
+      //   console.log(column);
       // }
 
     }]
 
 
-  // const selectRow = {
-  //   mode: 'checkbox',
-  //   clickToSelect: true
-  // };
+  const selectRow = {
+    mode: 'checkbox',
+    clickToSelect: true
+  };
 
 
   const options = {
@@ -366,7 +358,7 @@ const UserHome = () => {
         keyField="id"
         data={products}
         columns={columns}
-        exportCSV={{ onlyExportFiltered: true, exportAll: false }}
+        exportCSV={{ onlyExportFiltered: true, exportAll: false ,fileName: 'user-list.csv', }}
         search
       >
         {
