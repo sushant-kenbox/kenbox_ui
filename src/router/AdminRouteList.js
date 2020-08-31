@@ -1,7 +1,7 @@
 import React from "react"
 import { Route, Switch } from "react-router-dom"
 import Main from "../components/Home/"
-import { UserHome, UserAdd } from "./../containers/views/Users/"
+import { UserHome, UserAdd ,UserView } from "./../containers/views/Users/"
 import NoMatch from "../components/Common/NoMatch"
 import PrivateRoute from "./PrivateRoute";
 
@@ -25,6 +25,11 @@ const routes = [
 		path: "/admin/users/add",
 		exact: true,
 		Component: UserAdd,
+	},
+	{
+		path: "/admin/users/view",
+		exact: true,
+		Component: UserView,
 	},
 	
 ]
