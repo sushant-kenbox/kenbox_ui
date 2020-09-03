@@ -358,7 +358,7 @@ const UserHome = () => {
         keyField="id"
         data={products}
         columns={columns}
-        exportCSV={{ onlyExportFiltered: true, exportAll: false ,fileName: 'user-list.csv', }}
+        exportCSV={{ onlyExportFiltered: true, exportAll: false, fileName: 'user-list.csv', }}
         search
       >
         {
