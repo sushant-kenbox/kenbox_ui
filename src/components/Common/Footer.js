@@ -1,17 +1,12 @@
 import React from "react"
-const  Footer = () => ( <footer className="site-footer">
-<div className="text-center">
-  <p>
-    © Copyrights <strong>Kanbox</strong>. All Rights Reserved
-  </p>
-  <div className="credits">
-    {}
-    Created by Varun
+const Footer = () => (<footer id="footer">
+  <div className="container-fluid">
+    <div className="row">
+      <div className="col-md-12 text-center">
+        <p>Powered By @kenbox 2020</p>
+      </div>
+    </div>
   </div>
-  <a href="index.html#" className="go-top">
-    <i className="fa fa-angle-up" />  
-  </a>
-</div>
 </footer>
 )
 

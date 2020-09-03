@@ -1,0 +1,61 @@
+@media only screen and (max-width: 1024px) {
+	.login-footer{
+		position: relative;
+	}
+	#login-section .social-media-app{
+		top: 27px;
+	}
+	#login-section .social-media .overlay {
+    bottom: -15px;
+}
+}
+
+@media only screen and (max-width: 1023px) {
+	#login-section .login-form-t {
+    width: 100%;
+}
+.login-footer .text-left {
+    text-align: center;
+}
+	.login-footer {
+    margin: 47px 0 0 0;
+}
+	#login-section .social-media-app {
+    margin: 88px 43px 0px 0;
+}
+	#login-section .social-media .overlay {
+    bottom: 4px;
+}
+#profile-section .profile-content-sec .col-md-6 {
+    -ms-flex: 0 0 50%;
+    -webkit-box-flex: 0;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+	#header .brand-logo {
+    float: right;
+    display: block;
+    position: relative;
+    bottom: 54px;
+}
+}
+
+@media only screen and (max-width: 767px) {
+#login-section .social-media .overlay {
+    bottom: 61px;
+    right: 0;
+    left: 0;
+}
+	#login-section .social-media-app {
+  margin: 60px auto;
+    float: none;
+}
+	.login-footer .text-left {
+    text-align: center !important;
+}
+	#login-section figure {
+    margin: 10px 5px 2rem;
+}
+}
+ @media only screen and (max-width: 479px) {
+ }

@@ -1,10 +1,10 @@
 import React, { StrictMode } from "react";
 import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./assets/css/style.css"
-import "./assets/css/style-responsive.css"
+import "./assets/style.css"
+import "./assets/css/responsive.css"
 import 'font-awesome/css/font-awesome.min.css';
-import './assets/css/zabuto_calendar.css'
+
 //import 'lib/gritter/css/jquery.gritter.css'
 
 import { BrowserRouter as Router } from "react-router-dom"

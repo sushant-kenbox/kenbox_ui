@@ -1,23 +1,21 @@
-import React from "react";
+import React,{Fragment} from "react";
 import Header from "./../../components/Common/Header"
-import SideBar from "../../components/Common/SideBar"
 import Footer from "./../../components/Common/Footer"
 
 export default ({ children }) => {
 
 
 
-	document.body.classList.remove('bg-dark')
+	//document.body.classList.remove('bg-dark')
 
 	console.log("render Main Admin")
 
 	return (
-		<div>
+		<Fragment>
 			<Header />
-			<SideBar />
 			{children}
 			<Footer/>
-		</div>
+		</Fragment>
 	)
 }
 
