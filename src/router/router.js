@@ -29,14 +29,6 @@ export default () => {
 			</Route>
 
 			<Route render={(props) => <NoMatch {...props} />} />
-			{/* <Route>
-				<MainDefault>
-					<Switch>
-						<RouteList />
-					</Switch>
-				</MainDefault>
-			</Route> */}
-
 		</Switch>
 
 	)
