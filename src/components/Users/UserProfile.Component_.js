@@ -8,7 +8,7 @@ import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import { ModelBoxDelete } from "./../Model"
 
 
-const UserHome = () => {
+const UserProfileComponent = () => {
 
   const [show, setShow] = useState(false);
 
@@ -410,4 +410,4 @@ const UserHome = () => {
   )
 }
 
-export default UserHome;
+export default UserProfileComponent;

@@ -1,3 +1,1 @@
-export * from "./UserAdd";
-export * from "./UserHome";
-export * from "./UserView";
+export * from "./UserProfile";
