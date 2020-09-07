@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom"
+import { Dropdown } from 'react-bootstrap';
 import SubHeader from "./../Common/SubHeader"
 import task from "./../../assets/img/task-h.png"
 import user from "./../../assets/img/user-p.png"
@@ -23,23 +24,19 @@ const Dashboard = () => {
                 <p>Hi Ravi Singh</p>
               </div>
               <div className="col-md-3 text-right ">
-                <div className="dropdown">
-                  <a
-                    type="button"
-                    className="dropdown-toggle"
-                    data-toggle="dropdown"
-                  >
-                    <span>Role Switcher</span>
-                    <i className="fa fa-angle-down" aria-hidden="true" />
-                  </a>
-                  <div className="dropdown-menu">
-                    <a className="dropdown-item" href="#">
-                      Hr Manager
-                    </a>
-                    <a className="dropdown-item" href="#">
-                      Manager
-                    </a>
-                  </div>
+              <div className="dropdown">
+                  <Dropdown>
+                    <Dropdown.Toggle className="dropdown-toggle"
+                      variant="nav-link text-primary"
+                      id="dropdown-basic">
+                     Role Switcher  <i className="fa fa-angle-down" aria-hidden="true"></i>
+                    </Dropdown.Toggle>
+
+                    <Dropdown.Menu className="dropdown-menu">
+                      <Dropdown.Item href="#" className="dropdown-item">Hr Manager</Dropdown.Item>
+                      <Dropdown.Item href="#" className="dropdown-item">Manager</Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
                 </div>
               </div>
               <div className="col-md-3 search-box-ty text-right">

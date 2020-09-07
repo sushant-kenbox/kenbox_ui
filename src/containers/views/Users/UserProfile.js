@@ -1,4 +1,5 @@
 import React from "react";
+import { Dropdown } from 'react-bootstrap';
 import SubHeader from "./../../../components/Common/SubHeader"
 import search from "./../../../assets/img/search.png"
 import UserProfileComponent from "./../../../components/Users/UserProfile.Component"
@@ -17,6 +18,7 @@ export class UserProfile extends React.Component {
     return (
       <div className="page-wrapper main-top-wrapper">
         <SubHeader />
+
         <section id="profile">
           <div className="container">
             <div className="row mt-3 pro-prty">
@@ -32,7 +34,7 @@ export class UserProfile extends React.Component {
                 </form>
               </div>
               <div className="col-md-2 text-center">
-                <div className="dropdown">
+                {/* <div className="dropdown">
                   <a type="button" className="dropdown-toggle" data-toggle="dropdown">
                     <span>My Role</span>
                     <i className="fa fa-angle-down" aria-hidden="true"></i>
@@ -43,6 +45,21 @@ export class UserProfile extends React.Component {
                     <a className="dropdown-item" href="#">Web Developer</a>
                     <a className="dropdown-item" href="#">Front End Developer</a>
                   </div>
+                </div> */}
+                <div className="dropdown">
+                  <Dropdown>
+                    <Dropdown.Toggle className="dropdown-toggle"
+                      variant="nav-link text-primary"
+                      id="dropdown-basic">
+                      My Role  <i className="fa fa-angle-down" aria-hidden="true"></i>
+                    </Dropdown.Toggle>
+
+                    <Dropdown.Menu className="dropdown-menu">
+                      <Dropdown.Item href="#" className="dropdown-item"  >UI/UX Designer</Dropdown.Item>
+                      <Dropdown.Item href="#" className="dropdown-item" >Web Developer</Dropdown.Item>
+                      <Dropdown.Item href="#" className="dropdown-item" >Front End Developer</Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
                 </div>
               </div>
 
