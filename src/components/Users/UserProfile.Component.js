@@ -20,11 +20,7 @@ const UserProfile = () => {
                   <td>
                     <div className="profile-pic text-center">
                       <figure>
-                        <img
-                          src={profile}
-                          className="img-fluid"
-                          alt="profile"
-                        />
+                        <img src={profile} className="img-fluid" alt="profile" />
                       </figure>
                       <h5>RAVI SINGH(0025)</h5>
                       <span>Web Designer</span>
@@ -40,19 +36,13 @@ const UserProfile = () => {
             <div className="col-md-12 bg-white">
               <ul className="nav">
                 <li className="nav-item">
-                  <a className="nav-link active" href="#">
-                    Profile
-            </a>
+                  <a className="nav-link active" href="#"> Profile </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    view
-            </a>
+                  <a className="nav-link" href="#"> view </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    History
-            </a>
+                  <a className="nav-link" href="#">   History  </a>
                 </li>
               </ul>
             </div>
@@ -81,7 +71,6 @@ const UserProfile = () => {
         </div>
       </div>
     </div>
-
   )
 }
 
