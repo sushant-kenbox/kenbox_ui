@@ -1,7 +1,6 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Link } from "react-router-dom"
 import { Dropdown } from 'react-bootstrap';
-import SubHeader from "./../Common/SubHeader"
 import task from "./../../assets/img/task-h.png"
 import user from "./../../assets/img/user-p.png"
 import search from "./../../assets/img/search.png"
@@ -14,9 +13,7 @@ import hierarchy from "./../../assets/img/hierarchy.jpg"
 const Dashboard = () => {
 
   return (
-    <Fragment>
-      <div className="page-wrapper main-top-wrapper">
-      <SubHeader/>
+
         <section id="profile-section">
           <div className="container">
             <div className="row mt-3 pro-prty">
@@ -167,9 +164,6 @@ const Dashboard = () => {
             </div>
           </div>
         </section>
-      </div>
-
-    </Fragment>
   );
 
 }
