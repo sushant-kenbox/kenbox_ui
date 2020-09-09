@@ -1,7 +1,6 @@
 import React, { Fragment, Suspense } from "react";
 import SubHeader from "./../../../components/Common/SubHeader"
 import Loading from "./../../../components/Common/Loading"
-//import DashboardComponent from "./../../../components/Dashboard/Dashboard.Component"
 const DashboardComponent = React.lazy(() => import('./../../../components/Dashboard/Dashboard.Component'));
 
 export class Dashboard extends React.Component {
@@ -17,7 +16,7 @@ export class Dashboard extends React.Component {
       <Fragment>
         <div className="page-wrapper main-top-wrapper">
           <SubHeader />
-          <Suspense fallback={<Loading/>}>
+          <Suspense fallback={<Loading />}>
             <DashboardComponent />
           </Suspense>
         </div>
