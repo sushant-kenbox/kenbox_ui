@@ -1,5 +1,5 @@
 import React from "react";
-import { Accordion, Card } from "react-bootstrap";
+import { Accordion, Card, Dropdown } from "react-bootstrap";
 import menu from "./../../assets/img/menu.png"
 const BasicInformation = () => {
 
@@ -59,23 +59,25 @@ const BasicInformation = () => {
             </div>
             <div className="col-md-1 btn-section text-right">
               <div className="btn-group">
-                <button
-                  type="button"
-                  className="btn  dropdown-toggle"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <img src={menu} alt="menu" />
-                </button>
-                <div className="dropdown-menu">
-                  <a className="dropdown-item" href="#">
-                    Edit
-    </a>
-                  <a className="dropdown-item" href="#">
-                    Add
-    </a>
-                </div>
+                <Dropdown>
+                  <Dropdown.Toggle className="dropdown-toggle"
+                    variant="nav-link text-primary"
+                    id="dropdown-basic">
+                    <button
+                      type="button"
+                      className="btn  dropdown-toggle"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <img src={menu} alt="menu" />
+                    </button>
+                  </Dropdown.Toggle>
+                  <Dropdown.Menu className="dropdown-menu">
+                    <Dropdown.Item href="#" className="dropdown-item">Edit</Dropdown.Item>
+                    <Dropdown.Item href="#" className="dropdown-item">Add</Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
               </div>
             </div>
           </div>

@@ -4,7 +4,7 @@ const Header = () => {
 
   const [condition, setCondition] = useState(true);
 
-  console.log('come', condition)
+  //console.log('come', condition)
 
   return (
 
