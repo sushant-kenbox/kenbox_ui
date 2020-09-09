@@ -2,18 +2,15 @@ import React, { useState } from "react"
 
 const Header = () => {
 
+  const [condition, setCondition] = useState(true);
 
-  const divStyle = {
-    display: 'block',
-    opacity: '1'
-  };
-
+  console.log('come', condition)
 
   return (
 
     <div className="container-fluid toast-msg">
       <div className="col-md-12 bg-left">
-        <div className="toast" data-autohide="false" style={divStyle} >
+        <div className={condition ? `toast show` : "toast fade hide"} data-autohide="false">
           <div className="toast-header">
             <strong className="mr-auto text-primary">Toast Header</strong>
             <small className="text-muted">5 mins ago</small>
@@ -21,6 +18,7 @@ const Header = () => {
               type="button"
               className="ml-2 mb-1 close"
               datadismiss="toast"
+              onClick={() => setCondition(!condition)}
             >
               ×
           </button>
@@ -29,7 +27,7 @@ const Header = () => {
         </div>
       </div>
     </div>
-  
+
   )
 
 }

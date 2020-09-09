@@ -1073,7 +1073,7 @@ box-shadow: 11px 0px 24px -14px rgba(94,94,94,0.64);
 }
 #profile .accordion h5{
 	color: #145374;
-    /* padding: 9px 15px 14px 15px; */
+    padding: 0px 15px 0px 15px;
     font-weight: 600;
 }
 #profile .profile-pic{
