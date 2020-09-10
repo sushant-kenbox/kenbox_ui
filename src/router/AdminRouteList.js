@@ -22,7 +22,7 @@ const routes = [
 		Component: UserProfile,
 	},
 	{
-		path: "(/admin/users/profile/edit/:catId|/admin/users/profile/edit)",
+		path: "/admin/users/profile/edit/:catId",
 		exact: true,
 		Component: UserProfile,
 	}
