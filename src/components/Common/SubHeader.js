@@ -20,9 +20,9 @@ const SubHeader = () => {
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-2">
-            <a id="show-sidebar" href="#">
+            <Link id="show-sidebar" to="/admin/users/dashboard">
               <img src={mesh} alt="mesh" />
-            </a>
+            </Link>
           </div>
           <div className="col-md-10">
             <div className="brand-logo text-left">
@@ -33,31 +33,31 @@ const SubHeader = () => {
             <div className="user-info-t text-right">
               <ul>
                 <li className="nav-item dropdown">
-                  <a href="#">
+                  <Link to="/admin/users/dashboard">
                     <i className="noti-mess">
                       {" "}
-                      <img src={task} alt="notification" />
+                      <img src={task} alt="mesh"  />
                     </i>
                     <span className="badge badge-pill">3</span>
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item dropdown">
-                  <a href="#">
+                  <Link to="/admin/users/dashboard">
                     <i className="task-a">
                       {" "}
-                      <img src={notification} alt="task" />
+                      <img src={notification} alt="mesh" />
                     </i>
                     <span className="badge badge-pill">3</span>
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item dropdown has-arrow main-drop">
-                  <Dropdown >
+                  <Dropdown>
                     <Dropdown.Toggle
                       variant="nav-link text-primary"
                       id="dropdown-basic"
                     >
                       <span className="user-img">
-                        <img src={profile} alt="profile" />
+                        <img src={profile} alt="mesh" />
                         <span className="status online" />
                       </span>
                       <span className="profile-ftr">Ravi</span>
@@ -67,26 +67,26 @@ const SubHeader = () => {
                       <Dropdown.Menu>
                         <div className="profile-set-menu text-center">
                           <Dropdown.Item>
-                            <i><img src={change} /></i>
+                            <i><img src={change} alt="mesh" /></i>
                             <h6>RAVI SINGH (EP-2303)</h6>
                             <p>ravisig@gmail.com</p>
                           </Dropdown.Item>
                         </div>
 
                         <Dropdown.Item>
-                          <i><img src={user} /></i>My Profile
+                          <i><img src={user}  alt="mesh" /></i>My Profile
                       </Dropdown.Item>
 
                         <Dropdown.Item>
-                          <i><img src={password} /></i>Change Password
+                          <i><img src={password} alt="mesh" /></i>Change Password
                       </Dropdown.Item>
 
                         <Dropdown.Item>
-                          <i><img src={gear} /></i>Settings
+                          <i><img src={gear} alt="mesh"/></i>Settings
                       </Dropdown.Item>
 
                         <Dropdown.Item>
-                          <i><img src={logout} /></i>Logout
+                          <i><img src={logout} alt="mesh" /></i>Logout
                       </Dropdown.Item>
 
                       </Dropdown.Menu>

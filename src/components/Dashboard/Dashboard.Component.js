@@ -30,8 +30,8 @@ const Dashboard = () => {
                     </Dropdown.Toggle>
 
                     <Dropdown.Menu className="dropdown-menu">
-                      <Dropdown.Item href="#" className="dropdown-item">Hr Manager</Dropdown.Item>
-                      <Dropdown.Item href="#" className="dropdown-item">Manager</Dropdown.Item>
+                      <Dropdown.Item href="/admin/users/dashboard" className="dropdown-item">Hr Manager</Dropdown.Item>
+                      <Dropdown.Item href="/admin/users/dashboard" className="dropdown-item">Manager</Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>
                 </div>
@@ -72,7 +72,7 @@ const Dashboard = () => {
                   </div>
                   <div className="col-md-4 text-center">
                     <article>
-                      <a href="#">
+                      <Link to="/admin/users/dashboard">
                         <div className="card-content">
                           <figure>
                             <img
@@ -83,12 +83,12 @@ const Dashboard = () => {
                           </figure>
                           <h2>Organization Announcement </h2>
                         </div>
-                      </a>
+                      </Link>
                     </article>
                   </div>
                   <div className="col-md-4 text-center">
                     <article>
-                      <a href="#">
+                      <Link href="/admin/users/dashboard">
                         <div className="card-content card-task">
                           <figure>
                             <img
@@ -99,12 +99,12 @@ const Dashboard = () => {
                           </figure>
                           <h2>Task(2) Notification(5)</h2>
                         </div>
-                      </a>
+                      </Link>
                     </article>
                   </div>
                   <div className="col-md-4 text-center">
                     <article>
-                      <a href="#">
+                      <Link to="/admin/users/dashboard">
                         <div className="card-content">
                           <figure>
                             <img
@@ -115,12 +115,12 @@ const Dashboard = () => {
                           </figure>
                           <h2>My Status</h2>
                         </div>
-                      </a>
+                      </Link>
                     </article>
                   </div>
                   <div className="col-md-4 text-center">
                     <article>
-                      <a href="#">
+                      <Link to="/admin/users/dashboard">
                         <div className="card-content">
                           <figure>
                             <img
@@ -131,12 +131,12 @@ const Dashboard = () => {
                           </figure>
                           <h2>My Team</h2>
                         </div>
-                      </a>
+                      </Link>
                     </article>
                   </div>
                   <div className="col-md-4 text-center">
                     <article>
-                      <a href="#">
+                      <Link href="/admin/users/dashboard">
                         <div className="card-content">
                           <figure>
                             <img
@@ -147,7 +147,7 @@ const Dashboard = () => {
                           </figure>
                           <h2>My Reports</h2>
                         </div>
-                      </a>
+                      </Link>
                     </article>
                   </div>
                 </div>

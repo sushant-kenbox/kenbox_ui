@@ -7,7 +7,6 @@ import twitter from "./../../../assets/img/twitter.png"
 import apple from "./../../../assets/img/apple-ios.png"
 import android from "./../../../assets/img/anroid-icon.png"
 
-
 class Login extends React.Component {
 	render() {
 		return (
@@ -55,7 +54,7 @@ class Login extends React.Component {
 											<div className="col-md-12">
 												<div className="row forgot-yu">
 													<div className="form-group col-md-6 text-left">
-														<a href="#">Forgot Password</a>
+														<Link to="/login">Forgot Password</Link>
 													</div>
 													<div className="form-group form-check form-check-ty col-md-6 text-right">
 														<label className="form-check-label">
@@ -81,28 +80,31 @@ class Login extends React.Component {
 												<span>or login with</span>
 												<ul>
 													<li>
-														<a href />
+														<Link to="/login">
 														<img
 															src={gplus}
 															className="img-fluid"
 															alt="google plus"
 														/>
+														</Link>
 													</li>
 													<li>
-														<a href />
+													<Link to="/login">
 														<img
 															src={fb}
 															className="img-fluid"
 															alt="Face book"
 														/>
+														</Link>
 													</li>
 													<li>
-														<a href />
+													<Link to="/login">
 														<img
 															src={twitter}
 															className="img-fluid"
 															alt="Twitter"
 														/>
+														</Link>
 													</li>
 												</ul>
 											</div>
@@ -116,22 +118,22 @@ class Login extends React.Component {
 											<h1>Download App</h1>
 											<ul>
 												<li>
-													<a href="#">
+												<Link to="/login">
 														<img
 															src={apple}
 															className="img-fluid"
 															alt="media"
 														/>
-													</a>
+													</Link>
 												</li>
 												<li>
-													<a href="#">
+												<Link to="/login">
 														<img
 															src={android}
 															className="img-fluid"
 															alt="media"
 														/>
-													</a>
+													</Link>
 												</li>
 											</ul>
 										</article>

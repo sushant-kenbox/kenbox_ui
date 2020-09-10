@@ -20,7 +20,7 @@ export default () => {
 		<Switch>
 			<PublicRoute restricted={true} exact path={["/", "/login", "/defaultPath"]} component={Login} />
 			{/* <PublicRoute restricted={true} path='/registration' component={Registration} /> */}
-			<Route path='/admin/:path/:path/:path/:path?' exact>
+			<Route path='/admin/:path?/:path?/:path?/:path?' exact>
 				<MainAdminLayout>
 					<Switch>
 						<AdminRouteList />

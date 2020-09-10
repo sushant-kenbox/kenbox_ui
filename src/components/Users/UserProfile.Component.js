@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 import Accordion from 'react-bootstrap/Accordion'
 import profile from "./../../assets/img/profile.png"
 import BasicInformation from "./BasicInformation.Component"
@@ -36,13 +37,13 @@ const UserProfile = () => {
             <div className="col-md-12 bg-white">
               <ul className="nav">
                 <li className="nav-item">
-                  <a className="nav-link active" href="#"> Profile </a>
+                  <Link className="nav-link active" to="/admin/users/profile"> Profile </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#"> View </a>
+                  <Link className="nav-link" to="/admin/users/profile"> View </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">   History  </a>
+                  <Link className="nav-link" to="/admin/users/profile">   History  </Link>
                 </li>
               </ul>
             </div>
