@@ -4,9 +4,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/style.css"
 import "./assets/css/responsive.css"
 import 'font-awesome/css/font-awesome.min.css';
-
-//import 'lib/gritter/css/jquery.gritter.css'
-
 import { BrowserRouter as Router } from "react-router-dom"
 import { Provider } from "react-redux";
 import store from "./redux/store";

@@ -3,7 +3,7 @@ const Footer = () => (<footer id="footer">
   <div className="container-fluid">
     <div className="row">
       <div className="col-md-12 text-center">
-        <p>Powered By @kenbox 2020</p>
+        <p>Powered By @Kenbox 2020</p>
       </div>
     </div>
   </div>

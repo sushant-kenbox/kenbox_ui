@@ -63,19 +63,11 @@ const BasicInformation = () => {
                   <Dropdown.Toggle className="dropdown-toggle"
                     variant="nav-link text-primary"
                     id="dropdown-basic">
-                    <button
-                      type="button"
-                      className="btn  dropdown-toggle"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      <img src={menu} alt="menu" />
-                    </button>
+                    <img src={menu} alt="menu" />
                   </Dropdown.Toggle>
                   <Dropdown.Menu className="dropdown-menu">
-                    <Dropdown.Item href="#" className="dropdown-item">Edit</Dropdown.Item>
-                    <Dropdown.Item href="#" className="dropdown-item">Add</Dropdown.Item>
+                    <Dropdown.Item href="/admin/users/profile/edit" className="dropdown-item">Edit</Dropdown.Item>
+                    <Dropdown.Item href="/admin/users/profile/add" className="dropdown-item">Add</Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
               </div>

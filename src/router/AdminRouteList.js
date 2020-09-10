@@ -20,6 +20,11 @@ const routes = [
 		path: "/admin/users/profile",
 		exact: true,
 		Component: UserProfile,
+	},
+	{
+		path: "/admin/users/profile/edit/:catId",
+		exact: true,
+		Component: UserProfile,
 	}
 
 ]

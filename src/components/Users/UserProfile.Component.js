@@ -39,7 +39,7 @@ const UserProfile = () => {
                   <a className="nav-link active" href="#"> Profile </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#"> view </a>
+                  <a className="nav-link" href="#"> View </a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="#">   History  </a>
