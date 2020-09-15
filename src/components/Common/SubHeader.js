@@ -1,6 +1,7 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Link } from "react-router-dom"
-import { Dropdown } from 'react-bootstrap';
+import { Dropdown } from "react-bootstrap";
+import LeftSubNavBar from "./LeftSubNavBar"
 
 import logo from "./../../assets/img/kenbox-logo.png"
 import mesh from "./../../assets/img/mesh-h.png"
@@ -15,55 +16,63 @@ import logout from "./../../assets/img/logout.png"
 
 const SubHeader = () => {
 
+
+  const handleOpenSideBar = () => {
+
+    let dashboard = document.getElementById('dashboard')
+    dashboard.classList.add('toggled')
+    console.log('show-sidebar ',)
+  }
   return (
-    <header id="header" className="sticky-top">
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-md-2">
-            <Link id="show-sidebar" to="/admin/users/dashboard">
-              <img src={mesh} alt="mesh" />
-            </Link>
-          </div>
-          <div className="col-md-10">
-            <div className="brand-logo text-left">
-              <Link to="/admin/users/dashboard">
-                <img src={logo} alt="brand logo" />
+    <Fragment>
+      <header id="header" className="sticky-top">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-md-2">
+              <Link id="show-sidebar" to="/admin/users/dashboard">
+                <img src={mesh} alt="mesh" onClick={handleOpenSideBar} />
               </Link>
             </div>
-            <div className="user-info-t text-right">
-              <ul>
-                <li className="nav-item dropdown">
-                  <Link to="/admin/users/dashboard">
-                    <i className="noti-mess">
-                      {" "}
-                      <img src={task} alt="mesh"  />
-                    </i>
-                    <span className="badge badge-pill">3</span>
-                  </Link>
-                </li>
-                <li className="nav-item dropdown">
-                  <Link to="/admin/users/dashboard">
-                    <i className="task-a">
-                      {" "}
-                      <img src={notification} alt="mesh" />
-                    </i>
-                    <span className="badge badge-pill">3</span>
-                  </Link>
-                </li>
-                <li className="nav-item dropdown has-arrow main-drop">
-                  <Dropdown>
-                    <Dropdown.Toggle
-                      variant="nav-link text-primary"
-                      id="dropdown-basic"
-                    >
-                      <span className="user-img">
-                        <img src={profile} alt="mesh" />
-                        <span className="status online" />
-                      </span>
-                      <span className="profile-ftr">Ravi</span>
+            <div className="col-md-10">
+              <div className="brand-logo text-left">
+                <Link to="/admin/users/dashboard">
+                  <img src={logo} alt="brand logo" />
+                </Link>
+              </div>
+              <div className="user-info-t text-right">
+                <ul>
+                  <li className="nav-item dropdown">
+                    <Link to="/admin/users/dashboard">
+                      <i className="noti-mess">
+                        {" "}
+                        <img src={task} alt="mesh" />
+                      </i>
+                      <span className="badge badge-pill">3</span>
+                    </Link>
+                  </li>
+                  <li className="nav-item dropdown">
+                    <Link to="/admin/users/dashboard">
+                      <i className="task-a">
+                        {" "}
+                        <img src={notification} alt="mesh" />
+                      </i>
+                      <span className="badge badge-pill">3</span>
+                    </Link>
+                  </li>
+                  <li className="nav-item dropdown has-arrow main-drop">
+                    <Dropdown>
+                      <Dropdown.Toggle
+                        variant="nav-link text-primary"
+                        id="dropdown-basic"
+                      >
+                        <span className="user-img">
+                          <img src={profile} alt="mesh" />
+                          <span className="status online" />
+                        </span>
+                        <span className="profile-ftr">Ravi</span>
 
-                    </Dropdown.Toggle>
- 
+                      </Dropdown.Toggle>
+
                       <Dropdown.Menu>
                         <div className="profile-set-menu text-center">
                           <Dropdown.Item>
@@ -74,7 +83,7 @@ const SubHeader = () => {
                         </div>
 
                         <Dropdown.Item>
-                          <i><img src={user}  alt="mesh" /></i>My Profile
+                          <i><img src={user} alt="mesh" /></i>My Profile
                       </Dropdown.Item>
 
                         <Dropdown.Item>
@@ -82,7 +91,7 @@ const SubHeader = () => {
                       </Dropdown.Item>
 
                         <Dropdown.Item>
-                          <i><img src={gear} alt="mesh"/></i>Settings
+                          <i><img src={gear} alt="mesh" /></i>Settings
                       </Dropdown.Item>
 
                         <Dropdown.Item>
@@ -91,17 +100,19 @@ const SubHeader = () => {
 
                       </Dropdown.Menu>
 
-                  </Dropdown>
-                </li>
+                    </Dropdown>
+                  </li>
 
-              </ul>
+                </ul>
+              </div>
+
+
             </div>
-
-
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+      <LeftSubNavBar />
+    </Fragment>
 
   );
 

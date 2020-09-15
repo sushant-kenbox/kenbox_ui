@@ -14,7 +14,7 @@ export class Dashboard extends React.Component {
 
     return (
       <Fragment>
-        <div className="page-wrapper main-top-wrapper">
+        <div className="page-wrapper main-top-wrapper" id="dashboard">
           <SubHeader />
           <Suspense fallback={<Loading />}>
             <DashboardComponent />

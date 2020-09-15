@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom"
 import { Dropdown } from 'react-bootstrap';
-import task from "./../../assets/img/task-h.png"
-import user from "./../../assets/img/user-p.png"
+import task from "./../../assets/img/task.png"
+import user from "./../../assets/img/user.png"
 import search from "./../../assets/img/search.png"
 import shutblue from "./../../assets/img/shout-blue.png"
 import team from "./../../assets/img/team.png"
