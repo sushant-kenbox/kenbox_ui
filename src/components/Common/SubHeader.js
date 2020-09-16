@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom"
 import { Dropdown } from "react-bootstrap";
 import LeftSubNavBar from "./LeftSubNavBar"
@@ -16,11 +16,13 @@ import logout from "./../../assets/img/logout.png"
 
 const SubHeader = () => {
 
+  let [showSubNav, setShowSubNav] = useState(false)
 
   const handleOpenSideBar = () => {
 
     let dashboard = document.getElementById('dashboard')
     dashboard.classList.add('toggled')
+    setShowSubNav(true)
     console.log('show-sidebar ',)
   }
   return (
@@ -111,7 +113,7 @@ const SubHeader = () => {
           </div>
         </div>
       </header>
-      <LeftSubNavBar />
+      {showSubNav === true && <LeftSubNavBar />}
     </Fragment>
 
   );
