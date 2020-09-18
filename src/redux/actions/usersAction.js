@@ -10,7 +10,6 @@ export function userLogin(data) {
 		dispatch({
 			type: PENDING,
 		})
-
 		try {
 				let response = await axios.get(
 				Api.USER_LOGIN_API,
