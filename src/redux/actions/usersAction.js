@@ -12,8 +12,7 @@ export function userLogin(data) {
 		})
 
 		try {
-
-			let response = await axios.get(
+				let response = await axios.get(
 				Api.USER_LOGIN_API,
 				{
 					params: data
@@ -22,10 +21,7 @@ export function userLogin(data) {
 				headers: {
 					"Authorization": `${Api.BEARER}${localStorage.getItem(Api.TOKEN_KEY)}`
 				}
-			}
-
-
-			).then(res => res.data);
+			}).then(res => res.data);
 			dispatch({
 				type: USER_LOGIN,
 				payload: response,
