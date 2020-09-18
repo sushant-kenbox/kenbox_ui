@@ -1261,3 +1261,53 @@ box-shadow: 11px 0px 24px -14px rgba(94,94,94,0.64);
 	bottom: 0;
 }
 */
+
+.profile-pic {
+    max-width: 200px;
+    max-height: 200px;
+}
+.file-upload {
+    display: none;
+}
+.circle {
+    border-radius: 1000px !important;
+    overflow: hidden;
+    width: 128px;
+    height: 128px;
+    border: 8px solid rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 72px;
+}
+.upload-button {
+  font-size: 1.2em;
+}
+
+.upload-button:hover {
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+  color: #999;
+}
+	
+#profileImg{
+	margin:0 auto;
+    padding: 9px;
+}
+#imgModal .modal-footer {
+float: left !important;
+}
+#imgModal .modal-header h4{
+	font-size: 19px;
+    color: #145374;
+	-webkit-box-shadow: 11px 0px 24px -14px rgba(94,94,94,0.64); 
+}
+#imgModal .modal-body {
+display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	border-bottom: 0px solid #3a3f48;
+}
+.modal-body > .img-responsive {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -2,6 +2,8 @@ import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom"
 import { Dropdown } from "react-bootstrap";
 import LeftSubNavBar from "./LeftSubNavBar"
+import { ModelBoxImageUpload } from "./../Model"
+
 import { logout } from "./../../router/utils"
 
 import logo from "./../../assets/img/kenbox-logo.png"
@@ -17,6 +19,8 @@ import logoutIcon from "./../../assets/img/logout.png"
 
 const SubHeader = () => {
 
+  const [show, setShow] = useState(false);
+
   let [showSubNav, setShowSubNav] = useState(false)
 
   const handleOpenSideBar = () => {
@@ -28,12 +32,21 @@ const SubHeader = () => {
 
 
   }
+
   const handleLogout = () => {
     console.log('handleLogout ',)
     logout();
   }
+
+  const handleUploadImage = ()=>{
+    setShow(true);
+  }
+
+  const handleCloseModel = () => setShow(false);
+
   return (
     <Fragment>
+      <ModelBoxImageUpload show={show} handleCloseModel={handleCloseModel} />
       <header id="header" className="sticky-top">
         <div className="container-fluid">
           <div className="row">
@@ -85,7 +98,7 @@ const SubHeader = () => {
                       <Dropdown.Menu>
                         <div className="profile-set-menu text-center">
                           <Dropdown.Item>
-                            <i><img src={change} alt="mesh" /></i>
+                            <i><img src={change} alt="mesh"  onClick={handleUploadImage}/></i>
                             <h6>RAVI SINGH (EP-2303)</h6>
                             <p>ravisig@gmail.com</p>
                           </Dropdown.Item>
