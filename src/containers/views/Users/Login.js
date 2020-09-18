@@ -1,14 +1,46 @@
-import React from "react";
+import React, { Component } from "react";
+import { connect } from 'react-redux';
+import { userLogin } from './../../../redux/actions/usersAction';
 import { Link } from "react-router-dom"
+import LoginFormComponent from "./../../../components/Users/LoginForm.Component"
 import logo from "./../../../assets/img/kenbox-login-logo.png"
-import gplus from "./../../../assets/img/google-plus.png"
-import fb from "./../../../assets/img/face-book.png"
-import twitter from "./../../../assets/img/twitter.png"
 import apple from "./../../../assets/img/apple-ios.png"
 import android from "./../../../assets/img/anroid-icon.png"
 
-class Login extends React.Component {
+class Login extends Component {
+	constructor(props) {
+		super(props)
+		this.state = {
+			users: {
+				email: "",
+				password: ""
+			}
+		}
+	}
+
+	handleChange = (e) => {
+
+		const name = e.target.name;
+		const value = e.target.value;
+		let {users} = this.state
+		this.setState({
+			users: {
+				...users,
+				[name]: value
+			}
+		});
+
+
+		console.log('handleChange', e.target.value)
+	}
+
+	handleLogin = () => {
+		let {users} = this.state
+		console.log('handleChange', this.state.users)
+		this.props.userLogin(users)
+	}
 	render() {
+		//console.log('click login', this.props)
 		return (
 			<section id="login-section">
 				<div className="black-bg">
@@ -30,85 +62,10 @@ class Login extends React.Component {
 										<p>Access to our Dashboard</p>
 									</div>
 									<div className="login-form">
-										<form action="/action_page.php">
-											<div className="form-group col-md-12">
-												<label htmlFor="email">Email:</label>
-												<input
-													type="email"
-													className="form-control"
-													id="email"
-													placeholder
-													name="email"
-												/>
-											</div>
-											<div className="form-group col-md-12">
-												<label htmlFor="pwd">Password:</label>
-												<input
-													type="password"
-													className="form-control"
-													id="pwd"
-													placeholder
-													name="pswd"
-												/>
-											</div>
-											<div className="col-md-12">
-												<div className="row forgot-yu">
-													<div className="form-group col-md-6 text-left">
-														<Link to="/login">Forgot Password</Link>
-													</div>
-													<div className="form-group form-check form-check-ty col-md-6 text-right">
-														<label className="form-check-label">
-															<input
-																className="form-check-input"
-																type="checkbox"
-																name="remember"
-															/>{" "}
-                              Remember me
-                            </label>
-													</div>
-												</div>
-											</div>
-											<div className="col-md-12">
-												<Link to="/login"
-													type="submit"
-													className="btn btn-primary"
-												>
-													Login
-                        </Link>
-											</div>
-											<div className="col-md-12 social-media-icon text-center mt-3">
-												<span>or login with</span>
-												<ul>
-													<li>
-														<Link to="/login">
-														<img
-															src={gplus}
-															className="img-fluid"
-															alt="google plus"
-														/>
-														</Link>
-													</li>
-													<li>
-													<Link to="/login">
-														<img
-															src={fb}
-															className="img-fluid"
-															alt="Face book"
-														/>
-														</Link>
-													</li>
-													<li>
-													<Link to="/login">
-														<img
-															src={twitter}
-															className="img-fluid"
-															alt="Twitter"
-														/>
-														</Link>
-													</li>
-												</ul>
-											</div>
-										</form>
+										<LoginFormComponent
+											{...this.props}
+											handleChange={this.handleChange}
+											handleLogin={this.handleLogin} />
 									</div>
 								</div>
 								<div className="social-media text-right">
@@ -118,7 +75,7 @@ class Login extends React.Component {
 											<h1>Download App</h1>
 											<ul>
 												<li>
-												<Link to="/login">
+													<Link to="/login">
 														<img
 															src={apple}
 															className="img-fluid"
@@ -127,7 +84,7 @@ class Login extends React.Component {
 													</Link>
 												</li>
 												<li>
-												<Link to="/login">
+													<Link to="/login">
 														<img
 															src={android}
 															className="img-fluid"
@@ -157,4 +114,17 @@ class Login extends React.Component {
 	}
 }
 
-export default Login
+
+const mapStateToProps = (state) => {
+	console.log("mapStateToProps loading data", state)
+	let { users, pending, error } = state;
+	return {
+		users: users,
+		pending: pending,
+		error: error
+	};
+
+};
+
+
+export default connect(mapStateToProps, { userLogin })(Login);

@@ -2,17 +2,18 @@ import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom"
 import { Dropdown } from "react-bootstrap";
 import LeftSubNavBar from "./LeftSubNavBar"
+import { logout } from "./../../router/utils"
 
 import logo from "./../../assets/img/kenbox-logo.png"
-import mesh from "./../../assets/img/mesh-h.png"
-import task from "./../../assets/img/task-h.png"
-import notification from "./../../assets/img/notifications-h.png"
-import profile from "./../../assets/img/profile-h.png"
+import mesh from "./../../assets/img/meshp-h.png"
+import task from "./../../assets/img/taskp-h.png"
+import notification from "./../../assets/img/notificationsp-h.png"
+import profile from "./../../assets/img/profilep-h.png"
 import change from "./../../assets/img/change-img.png"
 import password from "./../../assets/img/password.png"
 import user from "./../../assets/img/user-p.png"
 import gear from "./../../assets/img/gear-p.png"
-import logout from "./../../assets/img/logout.png"
+import logoutIcon from "./../../assets/img/logout.png"
 
 const SubHeader = () => {
 
@@ -24,6 +25,12 @@ const SubHeader = () => {
     dashboard.classList.add('toggled')
     setShowSubNav(true)
     console.log('show-sidebar ',)
+
+
+  }
+  const handleLogout = () => {
+    console.log('handleLogout ',)
+    logout();
   }
   return (
     <Fragment>
@@ -96,8 +103,8 @@ const SubHeader = () => {
                           <i><img src={gear} alt="mesh" /></i>Settings
                       </Dropdown.Item>
 
-                        <Dropdown.Item>
-                          <i><img src={logout} alt="mesh" /></i>Logout
+                        <Dropdown.Item onClick={handleLogout}>
+                          <i><img src={logoutIcon} alt="mesh" /></i>Logout
                       </Dropdown.Item>
 
                       </Dropdown.Menu>

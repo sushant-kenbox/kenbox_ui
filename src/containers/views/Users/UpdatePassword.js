@@ -3,7 +3,7 @@ import React from "react";
 import logo from "./../../../assets/img/kenbox-login-logo.png"
 import apple from "./../../../assets/img/apple-ios.png"
 import android from "./../../../assets/img/anroid-icon.png"
-//import confirm from "./../../../assets/img/confirm.png"
+import confirm from "./../../../assets/img/confirm.png"
 
 class ConfirmPassword extends React.Component {
     render() {
@@ -18,7 +18,7 @@ class ConfirmPassword extends React.Component {
                             <div class="col-md-12">
                                 <div class="updatePwd-form-t">
                                     <div class="col-md-12 mt-4 logo-prt text-center">
-                                        <figure><img src="" class="img-fluid" alt="login" /></figure>
+                                        <figure><img src={confirm} class="img-fluid" alt="login" /></figure>
                                     </div>
                                     <div class="text-center">
                                         <h1>Password Updated</h1>
