@@ -46,10 +46,10 @@ const LeftSubNavBar = () => {
 
 
                         <li className=" nav-link sidebar-dropdown">
-                            <a href="profile.html">
+                            <Link to="/admin/users/profile">
                                 <i><img src={user} alt="user" /></i>
                                 <span>My Profile</span>
-                            </a>
+                            </Link>
                             <div className="sidebar-submenu">
                                 <ul>
                                     <li>
@@ -68,10 +68,10 @@ const LeftSubNavBar = () => {
                             </div>
                         </li>
                         <li className="nav-link">
-                            <a href="#">
+                            <Link to="/admin/users/organizationAnnouncement">
                                 <i><img src={shout} alt="user" /></i>
                                 <span>Organization Announcement </span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-link sidebar-dropdown">
                             <a href="#">

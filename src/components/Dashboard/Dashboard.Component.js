@@ -72,7 +72,7 @@ const Dashboard = () => {
               </div>
               <div className="col-md-4 text-center">
                 <article>
-                  <Link to="/admin/users/dashboard">
+                  <Link to="/admin/users/organizationAnnouncement">
                     <div className="card-content">
                       <figure>
                         <img

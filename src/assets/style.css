@@ -1306,8 +1306,51 @@ display: flex;
 	align-items: center;
 	border-bottom: 0px solid #3a3f48;
 }
-.modal-body > .img-responsive {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+
+.navbar-custom { 
+	/*background-color: lightgreen; */
+	text-align: center;
+} 
+/* Modify brand and text color */ 
+  
+.navbar-custom .navbar-brand, 
+.navbar-custom .navbar-text { 
+	/*color: green; */
+	text-align: center;
+	font-weight: 400;
+}
+.form-group .form-control1 {
+	text-align: left;
+	font-weight: 400;
+}
+
+.secondary {
+	background-color: lightgrey;
+	text-align: center;
+}
+
+.bottom-left {
+	text-align: left;
+	margin-bottom: 2px;
+	margin-left: 16px;
+}
+.bottom-left .p .h5 {
+	font-family: 'Open Sans', sans-serif;
+	color: #145374;
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 35px;
+}
+
+.top-left {
+	text-align: left;
+	margin-top: 60px;
+	margin-left: 80px;
+}
+.top-left .p {
+	font-family: 'Open Sans', sans-serif;
+	color: #145374;
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 35px;
 }

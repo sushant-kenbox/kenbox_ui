@@ -2,6 +2,8 @@ import React from "react"
 import { Route, Switch } from "react-router-dom"
 import { Dashboard } from "../containers/views/Dashboard"
 import { UserProfile } from "../containers/views/Users"
+import OrganizationAnnouncement from "./../containers/views/Users/OrganizationAnnouncement"
+import AnnouncementDetails from "../components/Users/AnnouncementDetails.Component"
 import NoMatch from "../components/Common/NoMatch"
 import PrivateRoute from "./PrivateRoute";
 
@@ -25,6 +27,16 @@ const routes = [
 		path: "/admin/users/profile/edit/:catId",
 		exact: true,
 		Component: UserProfile,
+	},
+	{
+		path: "/admin/users/organizationAnnouncement",
+		exact: true,
+		Component: OrganizationAnnouncement,
+	},
+	{
+		path: "/admin/users/announcementDetails",
+		exact: true,
+		Component: AnnouncementDetails,
 	}
 
 ]

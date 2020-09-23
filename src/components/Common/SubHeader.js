@@ -6,7 +6,7 @@ import { ModelBoxImageUpload } from "./../Model"
 
 import { logout } from "./../../router/utils"
 
-import logo from "./../../assets/img/kenbox-logo.png"
+import logo from "./../../assets/img/prajjo-logo.png"
 import mesh from "./../../assets/img/meshp-h.png"
 import task from "./../../assets/img/taskp-h.png"
 import notification from "./../../assets/img/notificationsp-h.png"

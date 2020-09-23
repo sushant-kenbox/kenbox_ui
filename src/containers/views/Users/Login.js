@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { userLogin } from './../../../redux/actions/usersAction';
 import { Link } from "react-router-dom"
 import LoginFormComponent from "./../../../components/Users/LoginForm.Component"
-import logo from "./../../../assets/img/kenbox-login-logo.png"
+import logo from "./../../../assets/img/final-logo.png"
 import apple from "./../../../assets/img/apple-ios.png"
 import android from "./../../../assets/img/anroid-icon.png"
 
@@ -18,11 +18,12 @@ class Login extends Component {
 		}
 	}
 
+
 	handleChange = (e) => {
 
 		const name = e.target.name;
 		const value = e.target.value;
-		let {users} = this.state
+		let { users } = this.state
 		this.setState({
 			users: {
 				...users,
@@ -35,12 +36,12 @@ class Login extends Component {
 	}
 
 	handleLogin = () => {
-		let {users} = this.state
+		let { users } = this.state
 		console.log('handleChange', this.state.users)
 		this.props.userLogin(users)
 	}
 	render() {
-		//console.log('click login', this.props)
+		console.log('click login', this.state.active)
 		return (
 			<section id="login-section">
 				<div className="black-bg">
