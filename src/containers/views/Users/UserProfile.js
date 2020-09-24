@@ -1,12 +1,10 @@
-import React from "react";
+import React, { Component } from "react";
 import { Dropdown } from 'react-bootstrap';
 import SubHeader from "./../../../components/Common/SubHeader"
 import search from "./../../../assets/img/search.png"
 import UserProfileComponent from "./../../../components/Users/UserProfile.Component"
 
-
-export class UserProfile extends React.Component {
-
+class UserProfile extends Component {
 
   handleAddUser = () => {
     console.log('handleAddUser', this.props.history)
@@ -24,28 +22,23 @@ export class UserProfile extends React.Component {
             <div className="row mt-3 pro-prty">
               <div className="col-md-6">
                 <p>Hi Ravi Singh</p>
+                <h4>Add New Employee</h4>
               </div>
               <div className="col-md-4 search-box-ty text-center">
-                {/* <!-- Search form --> */}
+                {}
                 <form className="form-inline search-form">
-
-                  <input className="form-control form-control-sm ml-3 w-100" type="text" placeholder="Search" aria-label="Search" />
-                  <i><img src={search} alt="search" /></i>
+                  <input
+                    className="form-control form-control-sm ml-3 w-100"
+                    type="text"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <i>
+                    <img src={search} alt="search" />
+                  </i>
                 </form>
               </div>
               <div className="col-md-2 text-center">
-                {/* <div className="dropdown">
-                  <a type="button" className="dropdown-toggle" data-toggle="dropdown">
-                    <span>My Role</span>
-                    <i className="fa fa-angle-down" aria-hidden="true"></i>
-                  </a>
-                  <div className="dropdown-menu">
-
-                    <a className="dropdown-item" href="#">UI/UX Designer</a>
-                    <a className="dropdown-item" href="#">Web Developer</a>
-                    <a className="dropdown-item" href="#">Front End Developer</a>
-                  </div>
-                </div> */}
                 <div className="dropdown">
                   <Dropdown>
                     <Dropdown.Toggle className="dropdown-toggle"
@@ -55,19 +48,28 @@ export class UserProfile extends React.Component {
                     </Dropdown.Toggle>
 
                     <Dropdown.Menu className="dropdown-menu">
-                      <Dropdown.Item href="#" className="dropdown-item"  >UI/UX Designer</Dropdown.Item>
-                      <Dropdown.Item href="#" className="dropdown-item" >Web Developer</Dropdown.Item>
-                      <Dropdown.Item href="#" className="dropdown-item" >Front End Developer</Dropdown.Item>
+                      <Dropdown.Item href="#" className="dropdown-item">UI/UX Designer</Dropdown.Item>
+                      <Dropdown.Item href="#" className="dropdown-item">Basic Information</Dropdown.Item>
+                      <Dropdown.Item href="#" className="dropdown-item">Job Information</Dropdown.Item>
+                      <Dropdown.Item href="#" className="dropdown-item">Family Infomation</Dropdown.Item>
+                      <Dropdown.Item href="#" className="dropdown-item">Qualification Info</Dropdown.Item>
+                      <Dropdown.Item href="#" className="dropdown-item">Document Details</Dropdown.Item>
+                      <Dropdown.Item href="#" className="dropdown-item">Identity Info</Dropdown.Item>
+                      <Dropdown.Item href="#" className="dropdown-item">Background Details</Dropdown.Item>
+                      <Dropdown.Item href="#" className="dropdown-item">Good to Know</Dropdown.Item>
+                      <Dropdown.Item href="#" className="dropdown-item">Reward & Recognition</Dropdown.Item>
+                      <Dropdown.Item href="#" className="dropdown-item">Bank Information</Dropdown.Item>
+                      <Dropdown.Item href="#" className="dropdown-item">Contact Information</Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>
                 </div>
               </div>
-
             </div>
           </div>
-
           <UserProfileComponent />
-        </section>
+       
+         </section>
+
       </div>
 
     )

@@ -3,7 +3,7 @@ import SubHeader from "./../../../components/Common/SubHeader"
 import Loading from "./../../../components/Common/Loading"
 const DashboardComponent = React.lazy(() => import('./../../../components/Dashboard/Dashboard.Component'));
 
-export class Dashboard extends React.Component {
+class Dashboard extends React.Component {
 
   handleAddUser = () => {
     console.log('handleAddUser', this.props.history)
