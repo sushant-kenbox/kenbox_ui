@@ -1,6 +1,6 @@
 import React from "react";
 //import { Link } from "react-router-dom"
-import logo from "./../../../assets/img/kenbox-login-logo.png"
+import logo from "./../../../assets/img/final-logo.png"
 import apple from "./../../../assets/img/apple-ios.png"
 import android from "./../../../assets/img/anroid-icon.png"
 import confirm from "./../../../assets/img/confirm.png"

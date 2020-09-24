@@ -26,9 +26,12 @@ const SubHeader = () => {
   const handleOpenSideBar = () => {
 
     let dashboard = document.getElementById('dashboard')
-    dashboard.classList.add('toggled')
-    setShowSubNav(true)
-    console.log('show-sidebar ',)
+    if (dashboard.classList !== undefined && dashboard.classList !== null) {
+      dashboard.classList.add('toggled')
+      setShowSubNav(true)
+    }
+
+    console.log('show-sidebar',)
 
 
   }
@@ -38,7 +41,7 @@ const SubHeader = () => {
     logout();
   }
 
-  const handleUploadImage = ()=>{
+  const handleUploadImage = () => {
     setShow(true);
   }
 
@@ -98,7 +101,7 @@ const SubHeader = () => {
                       <Dropdown.Menu>
                         <div className="profile-set-menu text-center">
                           <Dropdown.Item>
-                            <i><img src={change} alt="mesh"  onClick={handleUploadImage}/></i>
+                            <i><img src={change} alt="mesh" onClick={handleUploadImage} /></i>
                             <h6>RAVI SINGH (EP-2303)</h6>
                             <p>ravisig@gmail.com</p>
                           </Dropdown.Item>
