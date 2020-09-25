@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Link } from "react-router-dom"
 import { Accordion, Card, Dropdown } from "react-bootstrap";
 import menu from "./../../assets/img/menu.png"
@@ -7,17 +7,15 @@ const JobInformation = () => {
   console.log("JobInformation")
   return (
     <Card>
-      <Card.Header className="mb-2">
-        <Accordion.Toggle as={Card.Header} eventKey="1">
-          <Link className="collapsed"><h5 className="mb-0">
-            Job Information{" "}
-            <i className="fa fa-angle-down rotate-icon" />
-          </h5>
-          </Link>
-        </Accordion.Toggle>
-      </Card.Header>
+      <Accordion.Toggle as={Card.Header} eventKey="1" className="mb-2">
+        <Link className="collapsed"><h5 className="mb-0">
+          Job Information{" "}
+          <i className="fa fa-angle-down rotate-icon" />
+        </h5>
+        </Link>
+      </Accordion.Toggle>
       <Accordion.Collapse eventKey="1">
-        <Card.Body>
+        <Fragment>
           <div className="profile-gap">
             {}
             <div
@@ -356,7 +354,7 @@ const JobInformation = () => {
             </div>
           </div>
 
-        </Card.Body>
+        </Fragment>
       </Accordion.Collapse>
     </Card>
   )

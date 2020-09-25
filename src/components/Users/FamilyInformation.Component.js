@@ -1,4 +1,4 @@
-import React from "react";
+import React,{Fragment} from "react";
 import { Link } from "react-router-dom"
 import { Accordion, Card, Dropdown } from "react-bootstrap";
 import menu from "./../../assets/img/menu.png"
@@ -8,17 +8,15 @@ const FamilyInformation = () => {
   console.log("FamilyInformation")
   return (
     <Card>
-      <Card.Header className="mb-2">
-        <Accordion.Toggle as={Card.Header} eventKey="2">
+        <Accordion.Toggle as={Card.Header} eventKey="2"   className="mb-2">
         <Link className="collapsed">
           <h5 className="mb-0">
             Family Info
             <i className="fa fa-angle-down rotate-icon" />
           </h5></Link>
         </Accordion.Toggle>
-      </Card.Header>
       <Accordion.Collapse eventKey="2">
-        <Card.Body>
+        <Fragment>
           <div className="profile-gap">
             {}
             <div
@@ -171,7 +169,7 @@ const FamilyInformation = () => {
             </div>
           </div>
 
-        </Card.Body>
+        </Fragment>
       </Accordion.Collapse>
     </Card>
 

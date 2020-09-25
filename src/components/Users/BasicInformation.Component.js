@@ -8,23 +8,22 @@ const BasicInformation = () => {
   console.log("BasicInformation")
   return (
     <Fragment>
-      <Card>
-        <Card.Header className="mb-2">
-          <Accordion.Toggle as={Card.Header} eventKey="0">
-            <Link className="collapsed"><h5 className="mb-0">
-              Basic Information{" "}
-              <i className="fa fa-angle-down rotate-icon" />
-            </h5>
-            </Link>
-          </Accordion.Toggle>
-        </Card.Header>
+      <Card> 
+        <Accordion.Toggle as={Card.Header} eventKey="0"   className="mb-2">
+          <Link className="collapsed"><h5 className="mb-0">
+            Basic Information{" "}
+            <i className="fa fa-angle-down rotate-icon" />
+          </h5>
+          </Link>
+        </Accordion.Toggle>
+
         <Accordion.Collapse eventKey="0">
-          <Card.Body>
+          <Fragment>
             <div>
               {}
               <div
                 id="collapseOne1"
-                className="collapse show "
+                className="collapse show"
                 role="tabpanel"
                 aria-labelledby="headingOne1"
                 data-parent="#accordionEx"
@@ -399,7 +398,7 @@ const BasicInformation = () => {
               </div>
             </div>
 
-          </Card.Body>
+          </Fragment>
         </Accordion.Collapse>
       </Card>
 
