@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom"
 import Accordion from 'react-bootstrap/Accordion'
-import profile from "./../../assets/img/profile.png"
 import BasicInformation from "./BasicInformation.Component"
 import JobInformation from "./JobInformation.Component";
 import FamilyInformation from "./FamilyInformation.Component"

@@ -1211,6 +1211,14 @@ box-shadow: 11px 0px 24px -14px rgba(94,94,94,0.64);
 	font-size: 35px;
 }
 #profile .accordion>.card>.card-header {
+   background-color:#145374;
+	box-shadow: 0px 0px 6px 2px rgba(119, 119, 119, 0.52);
+-moz-box-shadow: 0px 0px 6px 2px rgba(119, 119, 119, 0.52);
+-webkit-box-shadow: 0px 0px 6px 2px rgba(119, 119, 119, 0.52);
+	border-radius: 5px;
+	padding: 0;
+}
+#profile .card-header1 {
    background-color:#F8D36F;
 	box-shadow: 0px 0px 6px 2px rgba(119, 119, 119, 0.52);
 -moz-box-shadow: 0px 0px 6px 2px rgba(119, 119, 119, 0.52);
@@ -1223,9 +1231,26 @@ box-shadow: 11px 0px 24px -14px rgba(94,94,94,0.64);
     text-decoration: none;
 }
 #profile .accordion h5{
+	color: #fff;
+    padding: 9px 15px 14px 15px;
+    font-weight: 600;
+}
+#profile .card-header1 h5{
 	color: #145374;
     padding: 9px 15px 14px 15px;
     font-weight: 600;
+}
+#profile .accordionText{
+	color: #145374;
+    font-weight: 600;
+}
+#profile .card-header1 button{
+	color: #171719;
+    font-weight: 600;
+	border: 0px solid #fff;
+	background-color: #fff;
+	text-align: right;
+	float: right;
 }
 #profile .profile-pic{
 	margin-top: 10px;
@@ -1241,9 +1266,12 @@ box-shadow: 11px 0px 24px -14px rgba(94,94,94,0.64);
 	color: #0056b3;
 }
 #profile .profile-hert{
-	min-height: 400px;
+	min-height: 215px;
 }
 #profile .pro-prty p{
+	color: #145374;
+}
+#profile .pro-prty h4{
 	color: #145374;
 }
 .btn-section img{
@@ -1353,4 +1381,13 @@ display: flex;
 	font-weight: 600;
 	font-size: 15px;
 	line-height: 35px;
+}
+
+.profile-gap {
+	margin-top: 5px;
+}
+
+.dropdown-item {
+	color: #145374 !important;
+	font-weight: 600;
 }

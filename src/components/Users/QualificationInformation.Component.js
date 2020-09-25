@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 import { Accordion, Card, Dropdown } from "react-bootstrap";
 import menu from "./../../assets/img/menu.png"
 const QualificationInformation = () => {
@@ -9,10 +10,10 @@ const QualificationInformation = () => {
         <Card>
             <Card.Header className="mb-2">
                 <Accordion.Toggle as={Card.Header} eventKey="3">
-                    <h5 className="mb-0">
-                    Qualification Info
+                <Link className="collapsed"><h5 className="mb-0">
+                        Qualification Info
             <i className="fa fa-angle-down rotate-icon" />
-                    </h5>
+                    </h5></Link>
                 </Accordion.Toggle>
             </Card.Header>
             <Accordion.Collapse eventKey="3">
