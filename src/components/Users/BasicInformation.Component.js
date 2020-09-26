@@ -5,12 +5,12 @@ import profile from "./../../assets/img/profile.png"
 import menu from "./../../assets/img/menu.png"
 const BasicInformation = () => {
 
-  console.log("BasicInformation")
+  //console.log("BasicInformation")
   return (
     <Fragment>
       <Card> 
         <Accordion.Toggle as={Card.Header} eventKey="0"   className="mb-2">
-          <Link className="collapsed"><h5 className="mb-0">
+          <Link className="collapsed" to="/admin/users/profile"><h5 className="mb-0">
             Basic Information{" "}
             <i className="fa fa-angle-down rotate-icon" />
           </h5>

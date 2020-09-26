@@ -4,12 +4,11 @@ import { Accordion, Card, Dropdown } from "react-bootstrap";
 import menu from "./../../assets/img/menu.png"
 const DocumentDetails = () => {
 
-
-    console.log("Document Details")
+    //console.log("Document Details")
     return (
         <Card>
             <Accordion.Toggle as={Card.Header} eventKey="4" className="mb-2">
-                <Link className="collapsed"><h5 className="mb-0">
+                <Link className="collapsed" to="/admin/users/profile"><h5 className="mb-0">
                     Document Details
             <i className="fa fa-angle-down rotate-icon" />
                 </h5></Link>

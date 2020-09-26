@@ -1,5 +1,5 @@
 const PORT = `3001`
-const SERVER_PATH = `http://localhost:${PORT}`
+//const SERVER_PATH = `http://localhost:${PORT}`
 
 export const BEARER = `Bearer `
 export const TOKEN_KEY = 'kenbox';

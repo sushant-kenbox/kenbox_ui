@@ -7,7 +7,7 @@ import Loading from "./../Common/Loading"
 
 const LoginForm = ({ users, handleChange, handleLogin }) => {
 
-    console.log("LoginForm", users.error)
+    //console.log("LoginForm", users.error)
     return (
         <Fragment>
             {users.pending === true && <Loading />}

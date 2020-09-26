@@ -1,9 +1,9 @@
 import React from "react";
-//import { Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 import logo from "./../../../assets/img/final-logo.png"
 import apple from "./../../../assets/img/apple-ios.png"
 import android from "./../../../assets/img/anroid-icon.png"
-import confirm from "./../../../assets/img/confirm.png"
+//import confirm from "./../../../assets/img/confirm.png"
 
 class CodeVerification extends React.Component {
     render() {
@@ -36,18 +36,17 @@ class CodeVerification extends React.Component {
                                                     placeholder
                                                     name="vCode"
                                                 />
-                                                <a href className="resendCode verifyCode">
+                                                <Link to="/admin/users/profile" className="resendCode verifyCode">
                                                     Resend Code
-                            </a>
+                            </Link>
                                             </div>
                                             <div className="submit-wrap verifyCode">
-                                                <a
-                                                    href="index.html"
+                                            <Link to="/admin/users/profile"
                                                     type="submit"
                                                     className="btn btn-primary"
                                                 >
                                                     Verify
-                            </a>
+                            </Link>
                                             </div>
                                         </form>
                                     </div>
@@ -59,22 +58,22 @@ class CodeVerification extends React.Component {
                                             <h1>Download App</h1>
                                             <ul>
                                                 <li>
-                                                    <a href="#">
+                                                <Link to="/admin/users/profile">
                                                         <img
                                                             src={apple}
                                                             className="img-fluid"
                                                             alt="media"
                                                         />
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="#">
+                                                <Link to="/admin/users/profile">
                                                         <img
                                                             src={android}
                                                             className="img-fluid"
                                                             alt="media"
                                                         />
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </article>

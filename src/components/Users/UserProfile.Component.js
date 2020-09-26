@@ -14,12 +14,9 @@ import RewardAndRecognition from "./RewardAndRecognition.Component"
 import BankDetails from "./BankDetails.Component"
 import ContactInformation from "./ContactInformation.Component"
 
-
-
-
 const UserProfile = () => {
 
-  console.log("UserProfile")
+  ////console.log("UserProfile")
   return (
     <div className="container">
       <div className="row">

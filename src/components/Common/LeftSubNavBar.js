@@ -22,7 +22,7 @@ const LeftSubNavBar = () => {
         <nav id="sidebar" className="sidebar-wrapper">
             <div className="sidebar-content">
                 <div className="sidebar-brand">
-                    <a href="#">Dashboard</a>
+                    <Link to="/admin/users/profile">Dashboard</Link>
                     <div id="close-sidebar" onClick={handleOpenSideBar}>
                         <i className="fa fa-times"></i>
                     </div>
@@ -53,16 +53,16 @@ const LeftSubNavBar = () => {
                             <div className="sidebar-submenu">
                                 <ul>
                                     <li>
-                                        <a href="#">My Profile-1</a>
+                                    <Link to="/admin/users/profile">My Profile-1</Link>
                                     </li>
                                     <li>
-                                        <a href="#">My Profile-2</a>
+                                    <Link to="/admin/users/profile">My Profile-2</Link>
                                     </li>
                                     <li>
-                                        <a href="#">My Profile-3</a>
+                                    <Link to="/admin/users/profile">My Profile-3</Link>
                                     </li>
                                     <li>
-                                        <a href="#">My Profile-4</a>
+                                    <Link to="/admin/users/profile">My Profile-4</Link>
                                     </li>
                                 </ul>
                             </div>
@@ -74,44 +74,44 @@ const LeftSubNavBar = () => {
                             </Link>
                         </li>
                         <li className="nav-link sidebar-dropdown">
-                            <a href="#">
+                            <Link to="/admin/users/profile">
                                 <i><img src={user} alt="user" /></i>
                                 <span>Task </span>
-                            </a>
+                            </Link>
                             <div className="sidebar-submenu">
                                 <ul>
                                     <li>
-                                        <a href="#">Pending Task(3)</a>
+                                        <Link to="/admin/users/profile">Pending Task(3)</Link>
                                     </li>
                                     <li>
-                                        <a href="#">Approved Task(4)</a>
+                                        <Link to="/admin/users/profile">Approved Task(4)</Link>
                                     </li>
                                 </ul>
                             </div>
                         </li>
                         <li className="nav-link">
-                            <a href="#">
+                        <Link to="/admin/users/profile">
                                 <i><img src={notification} alt="user" /></i>
                                 <span>Notification(3) </span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-link">
-                            <a href="#">
+                            <Link to="/admin/users/profile">
                                 <i><img src={status} alt="user" /></i>
                                 <span>My Status</span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-link">
-                            <a href="#">
+                            <Link to="/admin/users/profile">
                                 <i><img src={group} alt="user" /></i>
                                 <span>My Team </span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-link">
-                            <a href="#">
+                            <Link to="/admin/users/profile">
                                 <i><img src={progress} alt="user" /></i>
                                 <span>My Reports </span>
-                            </a>
+                            </Link>
                         </li>
 
                     </ul>

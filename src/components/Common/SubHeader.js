@@ -26,8 +26,8 @@ const SubHeader = () => {
   const handleOpenSideBar = () => {
 
     let dashboard = document.getElementById('dashboard')
-    console.log(dashboard.classList != null)
-    if ( dashboard != null && dashboard.classList != undefined ) {
+    console.log("===",dashboard,"---")
+    if ( dashboard != null) {
       dashboard.classList.add('toggled')
       setShowSubNav(true)
     }

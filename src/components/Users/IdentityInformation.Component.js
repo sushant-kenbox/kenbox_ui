@@ -5,11 +5,11 @@ import menu from "./../../assets/img/menu.png"
 const IdentityInformation = () => {
 
 
-    console.log("IdentityInformation")
+    //console.log("IdentityInformation")
     return (
         <Card>
             <Accordion.Toggle as={Card.Header} eventKey="5" className="mb-2">
-                <Link className="collapsed"><h5 className="mb-0">
+                <Link className="collapsed" to="/admin/users/profile"><h5 className="mb-0">
                     Identity Information
             <i className="fa fa-angle-down rotate-icon" />
                 </h5></Link>

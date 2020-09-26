@@ -1,5 +1,5 @@
 import React from "react";
-//import { Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 import logo from "./../../../assets/img/final-logo.png"
 import apple from "./../../../assets/img/apple-ios.png"
 import android from "./../../../assets/img/anroid-icon.png"
@@ -34,8 +34,8 @@ class ConfirmPassword extends React.Component {
                                         <article>
                                             <h1>Download App</h1>
                                             <ul>
-                                                <li><a href="#"><img src={apple} class="img-fluid" alt="media" /></a></li>
-                                                <li><a href="#"><img src={android} class="img-fluid" alt="media" /></a></li>
+                                                <li><Link to="/admin/users/profile"><img src={apple} class="img-fluid" alt="media" /></Link></li>
+                                                <li><Link to="/admin/users/profile"><img src={android} class="img-fluid" alt="media" /></Link></li>
                                             </ul>
                                         </article>
                                     </div>

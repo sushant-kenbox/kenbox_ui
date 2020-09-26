@@ -1,5 +1,5 @@
 import React from "react";
-//import { Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 import logo from "./../../../assets/img/final-logo.png"
 import apple from "./../../../assets/img/apple-ios.png"
 import android from "./../../../assets/img/anroid-icon.png"
@@ -48,13 +48,12 @@ class ConfirmPassword extends React.Component {
                                                 />
                                             </div>
                                             <div className="submit-wrap">
-                                                <a
-                                                    href="index.html"
+                                            <Link to="/admin/users/profile"
                                                     type="submit"
                                                     className="btn btn-primary"
                                                 >
                                                     Login
-                            </a>
+                            </Link>
                                             </div>
                                         </form>
                                     </div>
@@ -66,22 +65,22 @@ class ConfirmPassword extends React.Component {
                                             <h1>Download App</h1>
                                             <ul>
                                                 <li>
-                                                    <a href="#">
+                                                <Link to="/admin/users/profile">
                                                         <img
                                                             src={apple}
                                                             className="img-fluid"
                                                             alt="media"
                                                         />
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="#">
+                                                <Link to="/admin/users/profile">
                                                         <img
                                                             src={android}
                                                             className="img-fluid"
                                                             alt="media"
                                                         />
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </article>

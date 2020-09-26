@@ -5,11 +5,11 @@ import menu from "./../../assets/img/menu.png"
 const RewardAndRecognition = () => {
 
 
-    console.log("RewardAndRecognition")
+    //console.log("RewardAndRecognition")
     return (
         <Card>
             <Accordion.Toggle as={Card.Header} eventKey="8" className="mb-2">
-                <Link className="collapsed"><h5 className="mb-0">
+                <Link className="collapsed" to="/admin/users/profile"><h5 className="mb-0">
                     Reward & Recognition
             <i className="fa fa-angle-down rotate-icon" />
                 </h5></Link>

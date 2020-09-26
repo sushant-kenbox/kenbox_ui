@@ -8,7 +8,7 @@ export const ModelBoxImageUpload = ({ show, handleCloseModel }) => {
     // const handleCloseModel = () => setShow(false);
     // const handleShowModel = () => setShow(true);
 
-    console.log("======", show)
+
     return (
         <>
 

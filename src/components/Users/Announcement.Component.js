@@ -37,14 +37,14 @@ const OrganizationAnnouncement = () => {
                                 </tr>
                                 <tr className="table-secondary">
                                     <td>
-                                        <img src={profile} alt="profile" /> <Link to="/admin/users/announcementDetails">Admin</Link>
+                                        <img src={profile} alt="profile" />Admin
                                     </td>
                                     <td>25/10/2020</td>
                                     <td>3001</td>
                                     <td>
-                                        Company Anniversary
+                                    <Link to="/admin/users/announcementDetails">  Company Anniversary
                                             <br />
-                                            hi everyone
+                                            hi everyone</Link>
                                     </td>
                                 </tr>
                                 <tr className="table-danger">
