@@ -3,6 +3,23 @@ import { Link } from "react-router-dom"
 import profile from "./../../assets/img/profile.png"
 
 const OrganizationAnnouncement = () => {
+
+    const announcement = [
+        { id: '3001', name: 'ABC', date: '27/11/2020', text: `Employee Wellness Meet !<br /> hi everyone` },
+        { id: '3002', name: 'XYZ', date: '29/11/2020', text: `Employee Wellness Meet !<br />hi everyone` },
+        { id: '3003', name: 'PQR', date: '21/11/2020', text: `Employee Wellness Meet !<br />hi everyone` },
+        { id: '3004', name: 'MNP', date: '22/11/2020', text: `Employee Wellness Meet !<br />hi everyone` },
+        { id: '3005', name: 'MZP', date: '23/11/2020', text: `Employee Wellness Meet !<br />hi everyone` },
+        { id: '3006', name: 'MNP', date: '24/11/2020', text: `Employee Wellness Meet !<br />hi everyone` },
+        { id: '3007', name: 'MLP', date: '25/11/2020', text: `Employee Wellness Meet !<br />hi everyone` },
+        { id: '3008', name: 'MUP', date: '26/11/2020', text: `Employee Wellness Meet !<br />hi everyone` },
+        { id: '3009', name: 'MTP', date: '27/11/2020', text: `Employee Wellness Meet !<br />hi everyone` },
+        { id: '3010', name: 'MRP', date: '28/11/2020', text: `Employee Wellness Meet !<br />hi everyone` },
+        { id: '30011', name: 'MOP', date: '17/11/2020', text: `Employee Wellness Meet !<br />hi everyone` },
+        { id: '30012', name: 'MWP', date: '07/11/2020', text: `Employee Wellness Meet !<br />hi everyone` },
+    ]
+
+
     return (
         <Fragment>
             <div className="col-md-12">
@@ -35,76 +52,20 @@ const OrganizationAnnouncement = () => {
                                     <th>ID</th>
                                     <th>Organization Announcement</th>
                                 </tr>
-                                <tr className="table-secondary">
-                                    <td>
-                                        <img src={profile} alt="profile" />Admin
-                                    </td>
-                                    <td>25/10/2020</td>
-                                    <td>3001</td>
-                                    <td>
-                                    <Link to="/admin/users/announcementDetails">  Company Anniversary
-                                            <br />
-                                            hi everyone</Link>
-                                    </td>
-                                </tr>
-                                <tr className="table-danger">
-                                    <td>
-                                        <img src={profile} alt="profile" /> Admin
-                                    </td>
-                                    <td>27/11/2020</td>
-                                    <td>3002</td>
-                                    <td>
-                                        Employee Wellness Meet !<br />
-                                            hi everyone
-                                            </td>
-                                </tr>
-                                <tr className="table-success">
-                                    <td>
-                                        <img src={profile} alt="profile" /> Admin
-                                    </td>
-                                    <td>27/12/2020</td>
-                                    <td>3003</td>
-                                    <td>
-                                        Birthday Celebration Party
-                                            <br />
-                                            hi everyone
-                                    </td>
-                                </tr>
-                                <tr className="table-secondary">
-                                    <td>
-                                        <img src={profile} alt="profile" /> Admin
-                                            </td>
-                                    <td>25/10/2020</td>
-                                    <td>3001</td>
-                                    <td>
-                                        Company Anniversary
-                                            <br />
-                                            hi everyone
-                                    </td>
-                                </tr>
-                                <tr className="table-danger">
-                                    <td>
-                                        <img src={profile} alt="profile" /> Admin
-                                    </td>
-                                    <td>27/11/2020</td>
-                                    <td>3002</td>
-                                    <td>
-                                        Employee Wellness Meet !<br />
-                                            hi everyone
-                                    </td>
-                                </tr>
-                                <tr className="table-success">
-                                    <td>
-                                        <img src={profile} alt="profile" /> Admin
-                                    </td>
-                                    <td>27/12/2020</td>
-                                    <td>3003</td>
-                                    <td>
-                                        Birthday Celebration Party
-                                            <br />
-                                            hi everyone
-                                    </td>
-                                </tr>
+                                {announcement.map((list, index) => {
+                                    return <tr className="row-striped" key={index}>
+                                        <td>
+                                            <img src={profile} alt="profile" />{list.name}
+                                        </td>
+                                        <td>{list.date}</td>
+                                        <td>{list.id}</td>
+                                        <td>
+                                            <Link to="/admin/users/announcementDetails"> {list.text}</Link>
+                                        </td>
+                                    </tr>
+
+
+                                })}
                             </tbody>
                         </table>
                         {}

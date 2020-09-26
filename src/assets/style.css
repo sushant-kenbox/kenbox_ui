@@ -1391,3 +1391,11 @@ display: flex;
 	color: #145374 !important;
 	font-weight: 600;
 }
+
+.row-striped:nth-of-type(even){
+	background-color: #f5c6cb;
+  }
+  
+  .row-striped:nth-of-type(odd){
+	background-color: #c3e6cb;
+  }
