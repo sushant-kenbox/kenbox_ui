@@ -1,8 +1,11 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom"
+import { ModelBoxEditAnnouncement, ModelBoxDelete } from "./../Model/"
 import profile from "./../../assets/img/profile.png"
 
 const OrganizationAnnouncement = () => {
+    const [show, setShow] = useState(false);
+    const [event, setEvent] = useState("");
 
     const announcement = [
         { id: '3001', name: 'ABC', date: '27/11/2020', text: `Employee Wellness Meet !<br /> hi everyone` },
@@ -19,9 +22,19 @@ const OrganizationAnnouncement = () => {
         { id: '30012', name: 'MWP', date: '07/11/2020', text: `Employee Wellness Meet !<br />hi everyone` },
     ]
 
+    const handleOpenEditModel = (e) => {
+        let { name, value } = e.target
+        setShow(true);
+        setEvent(value === "edit" ? "edit" : "delete");
+        //console.log("handleOpenEditModel", value === "edit")
+    }
+    const handleCloseModel = () => setShow(false);
 
     return (
         <Fragment>
+            {event === "delete" ?
+                <ModelBoxDelete show={show} handleCloseModel={handleCloseModel} /> :
+                <ModelBoxEditAnnouncement show={show} handleCloseModel={handleCloseModel} />}
             <div className="col-md-12">
                 <nav className="navbar navbar-custom">
                     <div className="container">
@@ -41,19 +54,27 @@ const OrganizationAnnouncement = () => {
                             </select>
                         </div>
                         <h6>entries</h6>
+                        <div className="form-group">
+                            <select className="form-control1" name="state1" id="editUpdate" onChange={handleOpenEditModel}>
+                                <option value="select">Select</option>
+                                <option value="edit">Edit</option>
+                                <option value="delete">Delete</option>
+                            </select>
+                        </div>
                         <table
                             className="table table-striped table-class tableStrip"
                             id="table-id"
                         >
                             <tbody>
                                 <tr className="table-warning">
-                                    <th>Name</th>
+                                    <th colSpan="2">Name</th>
                                     <th>Date</th>
                                     <th>ID</th>
                                     <th>Organization Announcement</th>
                                 </tr>
                                 {announcement.map((list, index) => {
                                     return <tr className="row-striped" key={index}>
+                                        <td><input type="checkbox" /></td>
                                         <td>
                                             <img src={profile} alt="profile" />{list.name}
                                         </td>

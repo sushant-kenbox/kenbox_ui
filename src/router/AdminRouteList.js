@@ -4,6 +4,7 @@ import Dashboard  from "../containers/views/Dashboard/Dashboard"
 import UserProfile  from "../containers/views/Users/UserProfile"
 import OrganizationAnnouncement from "./../containers/views/Users/OrganizationAnnouncement"
 import AnnouncementDetails from "../components/Users/AnnouncementDetails.Component"
+import AddAnnouncement from "./../containers/views/Users/AddAnnouncement"
 import NoMatch from "../components/Common/NoMatch"
 import PrivateRoute from "./PrivateRoute";
 
@@ -37,6 +38,11 @@ const routes = [
 		path: "/admin/users/announcementDetails",
 		exact: true,
 		Component: AnnouncementDetails,
+	},
+	{
+		path: "/admin/users/addAnnouncement",
+		exact: true,
+		Component: AddAnnouncement,
 	}
 
 ]

@@ -1,7 +1,7 @@
 import React, { StrictMode } from "react";
 import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./assets/style.css"
+import "./assets/style2.css"
 import "./assets/css/responsive.css"
 import 'font-awesome/css/font-awesome.min.css';
 import { BrowserRouter as Router } from "react-router-dom"
