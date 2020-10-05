@@ -11,7 +11,6 @@ export const ModelBoxEditAnnouncement = ({ show, event, handleCloseModel }) => {
                     <Modal.Title>Edit Announcement</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <div className="modal-body">
                         <section id="profile-section">
                             <div className="col-md-12">
                                 <nav className="navbar navbar-custom">
@@ -21,7 +20,6 @@ export const ModelBoxEditAnnouncement = ({ show, event, handleCloseModel }) => {
                                 </nav>
                             </div>
                         </section>
-                    </div>
                 </Modal.Body>
             </Modal>
         </>

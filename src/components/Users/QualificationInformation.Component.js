@@ -41,7 +41,6 @@ const QualificationInformation = () => {
                                                     {}
                                                     <div
                                                         id="collapseFour4"
-                                                        className="collapse"
                                                         role="tabpanel"
                                                         aria-labelledby="headingFour4"
                                                         data-parent="#accordionEx"
@@ -116,7 +115,7 @@ const QualificationInformation = () => {
                                                                             </Dropdown.Toggle>
                                                                             <Dropdown.Menu className="dropdown-menu">
                                                                                 <Dropdown.Item href="#" className="dropdown-item">Edit</Dropdown.Item>
-                                                                                <Dropdown.Item href="#" className="dropdown-item">Add</Dropdown.Item>
+                                                                                <Dropdown.Item href="#" className="dropdown-item">History</Dropdown.Item>
                                                                             </Dropdown.Menu>
                                                                         </Dropdown>
                                                                     </div>
@@ -225,7 +224,7 @@ const QualificationInformation = () => {
                                                                             </Dropdown.Toggle>
                                                                             <Dropdown.Menu className="dropdown-menu">
                                                                                 <Dropdown.Item href="#" className="dropdown-item">Edit</Dropdown.Item>
-                                                                                <Dropdown.Item href="#" className="dropdown-item">Add</Dropdown.Item>
+                                                                                <Dropdown.Item href="#" className="dropdown-item">History</Dropdown.Item>
                                                                             </Dropdown.Menu>
                                                                         </Dropdown>
                                                                     </div>

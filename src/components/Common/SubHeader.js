@@ -13,7 +13,6 @@ import notification from "./../../assets/img/notificationsp-h.png"
 import profile from "./../../assets/img/profilep-h.png"
 import change from "./../../assets/img/change-img.png"
 import password from "./../../assets/img/password.png"
-import user from "./../../assets/img/user-p.png"
 import gear from "./../../assets/img/gear-p.png"
 import logoutIcon from "./../../assets/img/logout.png"
 
@@ -109,19 +108,15 @@ const SubHeader = () => {
                         </div>
 
                         <Dropdown.Item>
-                          <i><img src={user} alt="mesh" /></i>My Profile
+                          <i><img src={password} alt="mesh" /></i><p className="profileMenuText">Change Password</p>
                       </Dropdown.Item>
 
                         <Dropdown.Item>
-                          <i><img src={password} alt="mesh" /></i>Change Password
-                      </Dropdown.Item>
-
-                        <Dropdown.Item>
-                          <i><img src={gear} alt="mesh" /></i>Settings
+                          <i><img src={gear} alt="mesh" /></i><p className="profileMenuText">Settings</p>
                       </Dropdown.Item>
 
                         <Dropdown.Item onClick={handleLogout}>
-                          <i><img src={logoutIcon} alt="mesh" /></i>Logout
+                          <i><img src={logoutIcon} alt="mesh" /></i><p className="profileMenuText">Logout</p>
                       </Dropdown.Item>
 
                       </Dropdown.Menu>

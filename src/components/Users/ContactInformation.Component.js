@@ -8,13 +8,13 @@ const ContactInformation = () => {
     //console.log("ContactInformation")
     return (
         <Card>
-            <Accordion.Toggle as={Card.Header} eventKey="10" className="mb-2">
+            <Accordion.Toggle as={Card.Header} eventKey="11" className="mb-2">
                 <Link className="collapsed" to="/admin/users/profile"> <h5 className="mb-0">
                     Contact Information
             <i className="fa fa-angle-down rotate-icon" />
                 </h5></Link>
             </Accordion.Toggle>
-            <Accordion.Collapse eventKey="10">
+            <Accordion.Collapse eventKey="11">
                 <Fragment>
                     <div className="profile-gap">
                         {}
@@ -113,7 +113,7 @@ const ContactInformation = () => {
                                                                             </Dropdown.Toggle>
                                                                             <Dropdown.Menu className="dropdown-menu">
                                                                                 <Dropdown.Item href="#" className="dropdown-item">Edit</Dropdown.Item>
-                                                                                <Dropdown.Item href="#" className="dropdown-item">Add</Dropdown.Item>
+                                                                                <Dropdown.Item href="#" className="dropdown-item">History</Dropdown.Item>
                                                                             </Dropdown.Menu>
                                                                         </Dropdown>
                                                                     </div>
@@ -221,7 +221,7 @@ const ContactInformation = () => {
                                                                             </Dropdown.Toggle>
                                                                             <Dropdown.Menu className="dropdown-menu">
                                                                                 <Dropdown.Item href="#" className="dropdown-item">Edit</Dropdown.Item>
-                                                                                <Dropdown.Item href="#" className="dropdown-item">Add</Dropdown.Item>
+                                                                                <Dropdown.Item href="#" className="dropdown-item">History</Dropdown.Item>
                                                                             </Dropdown.Menu>
                                                                         </Dropdown>
                                                                     </div>

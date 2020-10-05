@@ -24,7 +24,7 @@ class AddAnnouncement extends Component {
                         <h4><img src={shoutm} alt="shout-m" />Organization Announcement</h4>
                         <div className="col-md-12 text-right">
                             <span className="form-inline">
-                                <div class="submit-wrap right">
+                                <div className="submit-wrap right">
                                     <Link to="/admin/users/addAnnouncement" className="btn btn-default"> + Add Announcements</Link>
                                 </div>
                             </span>

@@ -43,7 +43,7 @@ const UserProfile = () => {
                 role="tablist"
                 aria-multiselectable="true"
               >
-                <Accordion defaultActiveKey="0">
+                <Accordion defaultActiveKey="0" >
                   <BasicInformation />
                   <JobInformation/>
                   <FamilyInformation/>

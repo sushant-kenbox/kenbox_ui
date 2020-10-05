@@ -184,8 +184,15 @@ header {
 #header .profile-set-menu p {
 	font-size: 12px;
 	line-height: 6px;
-	color: #145374;
+	color: #145374 !important;
+}
 
+.profileMenuText {
+	margin-left: 33px;
+	margin-top: -15px;
+	font-size: 12px;
+	line-height: 6px;
+	color: #145374 !important;
 }
 
 #header .profile-set a i img {
@@ -823,7 +830,7 @@ box-shadow: 11px 0px 24px -14px rgba(94,94,94,0.64);
 }
 .search-box-ty .search-form i{
 	position: absolute;
-   right: 67px;
+    right: 67px;
     top: 5px;
     bottom: 0;
 }
@@ -836,7 +843,17 @@ box-shadow: 11px 0px 24px -14px rgba(94,94,94,0.64);
     display: inline-block;
     width: auto;
     vertical-align: middle;
-    height: 35px;
+	height: 35px;
+}
+
+.searchBar {
+	border: 1px solid #145374;
+	background-color: #d4daf0 !important;
+	border-radius: 15px !important;
+}
+
+.searchBarYellow {
+	background-color:#F8D36F !important;
 }
 #profile-section .profile-card article{
 	background-color: #f3f1f3;
@@ -1308,11 +1325,23 @@ box-shadow: 11px 0px 24px -14px rgba(94,94,94,0.64);
 }
 .upload-button {
   font-size: 1.2em;
+  background-color: #0876b0;
 }
+
+.upload-button-cancel {
+	font-size: 1.2em;
+	background-color: #f3f1f3;
+	color: #145374;
+	border: 1px solid #cacaca;
+  }
 
 .upload-button:hover {
   transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
   color: #999;
+}
+
+.modalBtnLeft {
+	align-items: left !important;
 }
 	
 #profileImg{
@@ -1328,7 +1357,7 @@ float: left !important;
 	-webkit-box-shadow: 11px 0px 24px -14px rgba(94,94,94,0.64); 
 }
 #imgModal .modal-body {
-display: flex;
+	display: flex;
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
@@ -1351,9 +1380,24 @@ display: flex;
 	font-weight: 400;
 }
 
+.tableHeader {
+	background-color: #f8d36f !important;
+}
+
+.modal-lg {
+	width: 9000px !important; /* New width for default modal */
+}
+
 .secondary {
-	background-color: lightgrey;
+	background-color: #f0f0f0;
 	text-align: center;
+}
+
+.secondary h2 {
+	font-weight: bold;
+	font-size: 36px;
+	color: #145374;
+	text-align: left;
 }
 
 .secondary1 {
@@ -1403,6 +1447,11 @@ display: flex;
 	font-weight: 600;
 }
 
+.right1 {
+	color: #145374 !important;
+	font-weight: 600;
+}
+
 .center-button {
 	display: block !important;
 	text-align: center;
@@ -1422,10 +1471,13 @@ display: flex;
 }
 
 .center-button1  .btn {
-	background-color: #145374;
 	color: #fff !important;
 	font-weight: 600;
 	border-radius: 18px;
+}
+
+.btnColorBlue {
+	background-color: #145374;
 }
 
 .profile-gap {
@@ -1434,6 +1486,11 @@ display: flex;
 
 .dropdown-item {
 	color: #145374 !important;
+	font-weight: 600;
+}
+
+.dropdown-item1 {
+	color: #ee7838 !important;
 	font-weight: 600;
 }
 

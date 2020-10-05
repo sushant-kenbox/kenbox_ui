@@ -24,20 +24,20 @@ class OrganizationAnnouncement extends Component {
 
                     {this.state.admin === true
                         ?
-                        <div className="container secondary1">
+                        <div className="container secondary">
                             <br />
-                            <h4><img src={shoutm} alt="shout-m" />Organization Announcement</h4>
+                            <h2><img src={shoutm} alt="shout-m" />Organization Announcement</h2>
                             <div className="col-md-12 text-right">
                                 <form className="form-inline">
-                                <input
-                                        className="form-control form-control-sm ml-3 w-75"
+                                    <div className="submit-wrap right">
+                                        <Link to="/admin/users/addAnnouncement" className="btn btn-default right1"> + Add Announcements</Link>
+                                    </div>
+                                    <input
+                                        className="form-control form-control-sm ml-3 w-75 searchBar"
                                         type="text"
-                                        placeholder="Search"
+                                        placeholder=""
                                         aria-label="Search"
                                     />
-                                    <div class="submit-wrap right">
-                                        <Link to="/admin/users/addAnnouncement" className="btn btn-default"> + Add Announcements</Link>
-                                    </div>
                                 </form>
                                 <br /><br />
                             </div>
@@ -45,22 +45,18 @@ class OrganizationAnnouncement extends Component {
                         :
                         <div className="container secondary">
                             <br />
-                            <h4>
-                                <img src={shoutm} alt="shout-m" />
-                    Organization Announcement
-                </h4>
-                            <div className="col-md-3 search-box-ty text-right">
-
-                                <form className="form-inline search-form secondary">
+                            <h2><img src={shoutm} alt="shout-m" />Organization Announcement</h2>
+                            <div className="col-md-12 text-right">
+                                <form className="form-inline">
                                     <input
-                                        className="form-control form-control-sm ml-3 w-75"
+                                        className="form-control form-control-sm ml-3 w-75 searchBar"
                                         type="text"
-                                        placeholder="Search"
+                                        placeholder=""
                                         aria-label="Search"
                                     />
-                                    <i>
+                                    {/* <i>
                                         <img src={search} alt="search" />
-                                    </i>
+                                    </i> */}
                                 </form>
                                 <br />
                             </div>

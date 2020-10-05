@@ -8,14 +8,14 @@ const RewardAndRecognition = () => {
     //console.log("RewardAndRecognition")
     return (
         <Card>
-            <Accordion.Toggle as={Card.Header} eventKey="8" className="mb-2">
+            <Accordion.Toggle as={Card.Header} eventKey="9" className="mb-2">
                 <Link className="collapsed" to="/admin/users/profile"><h5 className="mb-0">
                     Reward & Recognition
             <i className="fa fa-angle-down rotate-icon" />
                 </h5></Link>
 
             </Accordion.Toggle>
-            <Accordion.Collapse eventKey="8">
+            <Accordion.Collapse eventKey="9">
                 <Fragment>
                     <div className="profile-gap">
                         {}
@@ -95,7 +95,7 @@ const RewardAndRecognition = () => {
                                                                             </Dropdown.Toggle>
                                                                             <Dropdown.Menu className="dropdown-menu">
                                                                                 <Dropdown.Item href="#" className="dropdown-item">Edit</Dropdown.Item>
-                                                                                <Dropdown.Item href="#" className="dropdown-item">Add</Dropdown.Item>
+                                                                                <Dropdown.Item href="#" className="dropdown-item">History</Dropdown.Item>
                                                                             </Dropdown.Menu>
                                                                         </Dropdown>
                                                                     </div>

@@ -20,7 +20,7 @@ const Dashboard = () => {
           <div className="col-md-6">
             <p>Hi Ravi Singh</p>
           </div>
-          <div className="col-md-3 text-right ">
+          <div className="col-md-2 text-right ">
             <div className="dropdown">
               <Dropdown>
                 <Dropdown.Toggle className="dropdown-toggle"
@@ -30,13 +30,13 @@ const Dashboard = () => {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu className="dropdown-menu">
-                  <Dropdown.Item href="/admin/users/dashboard" className="dropdown-item">Hr Manager</Dropdown.Item>
-                  <Dropdown.Item href="/admin/users/dashboard" className="dropdown-item">Manager</Dropdown.Item>
+                  <Dropdown.Item href="/admin/users/dashboard" className="dropdown-item1">Hr Manager</Dropdown.Item>
+                  <Dropdown.Item href="/admin/users/dashboard" className="dropdown-item1">Manager</Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
             </div>
           </div>
-          <div className="col-md-3 search-box-ty text-right">
+          <div className="col-md-4 search-box-ty text-right">
             {}
             <form className="form-inline search-form">
               <input
@@ -45,9 +45,9 @@ const Dashboard = () => {
                 placeholder="Search"
                 aria-label="Search"
               />
-              <i>
+              {/* <i>
                 <img src={search} alt="search" />
-              </i>
+              </i> */}
             </form>
           </div>
         </div>

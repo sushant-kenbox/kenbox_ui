@@ -28,7 +28,7 @@ class UserProfile extends Component {
                 {}
                 <form className="form-inline search-form">
                   <input
-                    className="form-control form-control-sm ml-3 w-100"
+                    className="form-control form-control-sm ml-3 w-100 searchBarYellow"
                     type="text"
                     placeholder="Search"
                     aria-label="Search"

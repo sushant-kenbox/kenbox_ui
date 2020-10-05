@@ -66,8 +66,9 @@ const OrganizationAnnouncement = () => {
                             id="table-id"
                         >
                             <tbody>
-                                <tr className="table-warning">
-                                    <th colSpan="2">Name</th>
+                                <tr className="tableHeader">
+                                    {/* <th colSpan="2">Name</th> */}
+                                    <th><input type="checkbox" /></th>
                                     <th>Date</th>
                                     <th>ID</th>
                                     <th>Organization Announcement</th>
@@ -75,9 +76,9 @@ const OrganizationAnnouncement = () => {
                                 {announcement.map((list, index) => {
                                     return <tr className="row-striped" key={index}>
                                         <td><input type="checkbox" /></td>
-                                        <td>
-                                            <img src={profile} alt="profile" />{list.name}
-                                        </td>
+                                        {/* <td>
+                                            <img src={profile} alt="profile" /> {list.name}
+                                        </td> */}
                                         <td>{list.date}</td>
                                         <td>{list.id}</td>
                                         <td>

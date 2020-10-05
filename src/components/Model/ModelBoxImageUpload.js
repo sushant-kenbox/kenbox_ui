@@ -15,9 +15,9 @@ export const ModelBoxImageUpload = ({ show, handleCloseModel }) => {
             <Modal show={show} onHide={handleCloseModel}>
                 <Modal.Header closeButton>
                     <Modal.Title>
-                        <h4 className="modal-title">
+                        <h5 className="modal-title">
                             Select Profile Photo
-						        </h4>
+						        </h5>
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
@@ -25,10 +25,10 @@ export const ModelBoxImageUpload = ({ show, handleCloseModel }) => {
                     <input className="file-upload" type="file" accept="image/*" />
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button className="btn btn-primary upload-button">
+                    <Button className="btn btn-primary upload-button modalBtnLeft">
                         Set a profile photo
                     </Button>
-                    <Button className="btn btn-default" onClick={handleCloseModel}>
+                    <Button className="btn btn-default upload-button-cancel" onClick={handleCloseModel}>
                         Cancel
                     </Button>
 

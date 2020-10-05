@@ -31,7 +31,7 @@ const AnnouncementForm = ({ show, event, handleCloseModel }) => {
             </textarea>
 
             <div className="modal-footer center-button1">
-                <button type="button" className="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#updateAnnouncement">Update</button>
+                <button type="button" className="btn btn-default btnColorBlue" data-dismiss="modal" data-toggle="modal" data-target="#updateAnnouncement">Update</button>
                 <button type="button" className="btn btn-secondary" data-dismiss="modal" onClick={handleCloseModel}>Cancel</button>
             </div>
         </form>
