@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { Link } from "react-router-dom"
 import { Accordion, Card, Dropdown } from "react-bootstrap";
 import menu from "./../../assets/img/menu.png"
-const DocumentDetails = () => {
+const DocumentDetails = (props) => {
 
     //console.log("Document Details")
     return (

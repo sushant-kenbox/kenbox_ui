@@ -12,8 +12,9 @@ class Login extends Component {
 		super(props)
 		this.state = {
 			users: {
-				email: "",
-				password: ""
+				username: "",
+				password: "",
+				tenantName: ""
 			}
 		}
 	}
@@ -32,16 +33,16 @@ class Login extends Component {
 		});
 
 
-		console.log('handleChange', e.target.value)
+		console.log("handleChange", e.target.value)
 	}
 
 	handleLogin = () => {
 		let { users } = this.state
-		console.log('handleChange', this.state.users)
+		console.log("handleChange", this.state.users)
 		this.props.userLogin(users)
 	}
 	render() {
-		console.log('click login', this.state.active)
+		
 		return (
 			<section id="login-section">
 				<div className="black-bg">
@@ -118,11 +119,12 @@ class Login extends Component {
 
 const mapStateToProps = (state) => {
 	console.log("mapStateToProps loading data", state)
-	let { users, pending, error } = state;
+	let { users, pending, error, employee } = state;
 	return {
 		users: users,
 		pending: pending,
-		error: error
+		error: error,
+		employee: employee
 	};
 
 };

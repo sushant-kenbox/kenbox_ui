@@ -1,12 +1,12 @@
 import React from "react";
-import Modal from 'react-bootstrap/Modal'
-import { Button } from 'react-bootstrap'
+import Modal from "react-bootstrap/Modal"
+import { Button } from "react-bootstrap"
 import uploadImage from "./../../assets/img/uploadImage.png"
 
 export const ModelBoxImageUpload = ({ show, handleCloseModel }) => {
-    // const [show, setShow] = useState(false);
-    // const handleCloseModel = () => setShow(false);
-    // const handleShowModel = () => setShow(true);
+	// const [show, setShow] = useState(false);
+	// const handleCloseModel = () => setShow(false);
+	// const handleShowModel = () => setShow(true);
 
 
     return (
@@ -30,12 +30,12 @@ export const ModelBoxImageUpload = ({ show, handleCloseModel }) => {
                     </Button>
                     <Button className="btn btn-default upload-button-cancel" onClick={handleCloseModel}>
                         Cancel
-                    </Button>
+					</Button>
 
-                </Modal.Footer>
-            </Modal>
+				</Modal.Footer>
+			</Modal>
 
-        </>
-    );
+		</>
+	);
 }
 

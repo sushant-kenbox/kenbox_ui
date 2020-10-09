@@ -25,7 +25,7 @@ export default () => {
 		<Switch>
 			<PublicRoute restricted={true} exact path={["/", "/login", "/defaultPath"]} component={Login} />
 			<PublicRoute restricted={true} exact path={["/forgotPassword"]} component={ForgotPassword} />
-			<PublicRoute restricted={true} exact path={["/confirmPassword"]} component={ConfirmPassword} />
+			<PublicRoute restricted={true} path={["/confirmPassword"]} component={ConfirmPassword} />
 			<PublicRoute restricted={true} exact path={["/updatePassword"]} component={UpdatePassword} />
 			<PublicRoute restricted={true} exact path={["/codeVerification"]} component={CodeVerification} />
 			{/* <PublicRoute restricted={true} path='/registration' component={Registration} /> */}

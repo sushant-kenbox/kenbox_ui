@@ -15,12 +15,12 @@ const routes = [
 		Component: Dashboard,
 	},
 	{
-		path: "/admin/users/dashboard",
+		path: "/admin/users/dashboard", 
 		exact: true,
 		Component: Dashboard,
 	},
 	{
-		path: "/admin/users/profile",
+		path: "/admin/users/profile", 
 		exact: true,
 		Component: UserProfile,
 	},

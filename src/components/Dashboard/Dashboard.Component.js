@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom"
-import { Dropdown } from 'react-bootstrap';
+import { Dropdown } from "react-bootstrap";
 import task from "./../../assets/img/task.png"
 import user from "./../../assets/img/user.png"
 import search from "./../../assets/img/search.png"
@@ -10,24 +10,27 @@ import statusblue from "./../../assets/img/status-blue.png"
 import hierarchy from "./../../assets/img/hierarchy.jpg"
 
 
-const Dashboard = () => {
+const Dashboard = (props) => {
 
-  return (
+	const employee = {...props};
 
-    <section id="profile-section">
-      <div className="container">
-        <div className="row mt-3 pro-prty">
-          <div className="col-md-6">
-            <p>Hi Ravi Singh</p>
-          </div>
-          <div className="col-md-2 text-right ">
-            <div className="dropdown">
-              <Dropdown>
-                <Dropdown.Toggle className="dropdown-toggle"
-                  variant="nav-link text-primary"
-                  id="dropdown-basic">
+	
+	return (
+		<section id="profile-section">
+			<div className="container">
+				<div className="row mt-3 pro-prty">
+					<div className="col-md-6">
+						<p>Hi {employee.firstName} {employee.lastName}</p>
+					
+					</div>
+					<div className="col-md-3 text-right ">
+						<div className="dropdown">
+							<Dropdown>
+								<Dropdown.Toggle className="dropdown-toggle"
+									variant="nav-link text-primary"
+									id="dropdown-basic">
                   Role Switcher  <i className="fa fa-angle-down" aria-hidden="true"></i>
-                </Dropdown.Toggle>
+								</Dropdown.Toggle>
 
                 <Dropdown.Menu className="dropdown-menu">
                   <Dropdown.Item href="/admin/users/dashboard" className="dropdown-item1">Hr Manager</Dropdown.Item>
